@@ -1,0 +1,33 @@
+.bank-page {
+    padding: 20px;
+    margin-left: 290px;  
+  }
+.bank-page-div h2{
+    font-weight: 600;
+    font-size: 27px;
+    line-height: 30px;
+    color: #101828;
+}
+.bank-page-div p{
+     font-weight: 400;
+     font-size: 14px;
+     line-height: 16px;
+     color: #475467;
+}
+.bank-cards-cont{
+    margin-top: 40px;
+}
+.bank-cards-cont p{
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 28px;
+    color: #101828;
+}
+.bank-cards-div{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.bank-cards-div div img{
+    width: 304px;
+    height: 182px;
+}

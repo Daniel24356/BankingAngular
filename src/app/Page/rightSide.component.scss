@@ -1,0 +1,453 @@
+.right-side {
+    margin-left: 290px;  /* Adjust for sidebar width */
+    padding: 0 15px;
+    display: flex;
+    gap: 20px;
+  }
+  .right-side-under{
+    // padding-top: 20px;
+  }
+  .welcome-div h1{
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 30px;
+    color: #101828;
+  }
+  .welcome-div h1 span{
+    color: #0179FE;
+  }
+  .welcome-div p{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #475467;
+  }
+  .second-right-div{
+    width: 610px;
+    height: 148px;
+    border-radius: 12px;
+    border: 1px solid #EAECF0;
+    padding: 20px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+    box-shadow: 0px 1px 3px 0px rgba(16, 24, 40, 0.1);
+    margin-top: 25px;
+  }
+  .sec-div{
+    display: flex;
+    gap: 24px;
+  }
+  .two-acc{
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    color: #101828;
+  }
+  .pie-img{
+    width: 110px;
+    height: 110px;
+    object-fit: contain;
+  }
+  .total-balance{
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 20px;
+    color: #475467;
+    margin-top: 25px;
+  }
+  .right-price{
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 22px;
+    color: #101828;
+  }
+  .add-bank{
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 20px;
+    color: #0179FE;
+  }
+  .transactions-right{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 610px;
+    height: 89px;
+    padding: 0px 0px 0px 0px;
+    margin-top: 20px;
+    border-bottom: 1px solid #EAECF0;
+  }
+  .top-transaction{
+    display: flex;
+    justify-content: space-between;
+  }
+  // .b-under{
+  //   display: flex;
+  //   flex-direction: column;
+  // }
+  .blue-left-img{
+    width: 34px;
+    height: 34px;
+    object-fit: contain;
+  }
+  .recent-txt{
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 38px;
+    color: #101828;
+  }
+  .view-btn{
+    width: 80px;
+    height: 35px;
+    border-radius: 8px;
+    border: 1px solid #D0D5DD;
+    background-color: white;
+    box-shadow: 0px 1px 3px 0px rgba(16, 24, 40, 0.1);
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 20px;
+  }
+  .bank-right{
+    display: flex;
+    gap: 20px;
+  }
+  .chase-right-txt{
+    color: #0179FE;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+  }
+  .chase-bank-div{
+    height: 28px;
+  }
+  .chase-bank-div p{
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    color: #667085;
+  }
+  .chase-bank-active{
+    padding-bottom: 0px;
+    border-bottom: 3px solid #0179FE;
+    height: 28px;
+  }
+  .savings-bank{
+    width: 610px;
+    background-color: #F5FAFF;
+    height: 75px;
+    display: flex;
+    align-items: top;
+    justify-content: space-between;
+    padding: 15px 24px;
+    margin-top: 22px;
+    border-radius: 8px;
+  }
+  .savings-bank-top{
+    display: flex;
+    align-items: top;
+    gap: 13px;
+  }
+  .save-bank-txt{
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    color: #194185;
+  }
+  .save-bank-price{
+    font-size: 14px;
+    font-weight: 600;
+    color: #1570EF;
+    margin-top: 2px;
+  }
+  .save-div{
+    width: 70px;
+    height: 24px;
+    border-radius: 16px;
+    background-color: #ECFDF3;
+    padding: 2px 10px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 20px;
+    color: #027A48;
+  }
+
+  .transaction-table-container {
+    background-color: #ffffff;
+    padding: 0;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px 0 #1018281A;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .transaction-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+
+  .transaction-table thead{
+    background-color: #F9FAFB;
+  }
+  
+  .transaction-table th,
+  .transaction-table td {
+    text-align: left;
+    padding: 12px 16px;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  
+  .transaction-table th {
+    color: #475467;
+    font-weight: 500;
+    font-size: 13px;
+  }
+  
+  .transaction-table td {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 20px;
+    // color: #101828;
+  }
+
+  .user-table-name{
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 20px;
+  }
+
+  .date-table-txt{
+      color: #475467;
+  }
+  
+  .status {
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  .status-btn {
+    font-weight: 500;
+    padding: 3px 12px; /* Small button padding */
+    border-radius: 12px; /* Rounded edges */
+    font-size: 12px;
+    line-height: 18px;
+    text-align: center;
+    border: none;
+    cursor: default;
+    outline: none;
+  }
+  
+ /* Success */
+.success .status-btn {
+  background-color: #ECFDF3;
+  color: #027A48;
+}
+
+/* Failed */
+.failed .status-btn {
+  background-color: #FEF3F2;
+  color: #B42318;
+}
+
+  .tableProfile{
+    height: 30px;
+    width: 30px;
+  }
+  .transaction-table td.transactionTable {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between the image and text */
+  }
+   /* Amount Colors */
+   .amount {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .credit {
+    color: #039855;
+  }
+
+  .debt {
+    color: #F04438;
+  }
+
+  .leftSide{
+    width: 300px;
+    border-left: 1px solid gainsboro;
+    // background-color: #0179FE;
+    height: 125vh;
+  }
+  .rainbow-div{
+    position: relative;
+  }
+  .rainbow-img{
+    height: 88px;
+    width: 300px;
+    object-fit: contain;
+  }
+  .large-div{
+    position: absolute;
+    top: 65px;
+    left: 15px;
+  }
+  .large{
+    width: 80px;
+    height: 80px;
+  }
+  .left-name-div{
+  //  background-color: #027A48;
+  //  height: 40px;
+  padding-left: 15px;
+  margin-top: 60px;
+  }
+  .left-name-txt{
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 32px;
+    color: #101828;
+  }
+  .left-name-email{
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 18px;
+    color: #475467;
+  }
+  .left-banks{
+    padding-left: 15px;
+    margin-top: 30px;
+  }
+  .left-banks-div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+    // background-color: #027A48;
+  }
+  .my-banks{
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 28px;
+    color: #101828;
+  }
+  .left-add-banks{
+    width: 93px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    // flex-direction: column;
+    gap: 0;
+    // background-color: red;
+  }
+  .add-banks-text{
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 20px;
+    color: #475467;
+  }
+  .card1{
+    position: relative;
+  }
+  .card2{
+    position: absolute;
+    top: -25px;
+    left: -25px;
+  }
+  .card-img{
+    width: 270px;
+  }
+  .cards-div{
+    margin-top: 30px;
+    margin-left: 20px;
+  }
+  .custom-icons{
+    font-size: 15px;
+    color: #475467;
+  }
+  .custom-iconsss{
+    font-size: 15px;
+    color: #0179FE;
+  }
+  .bank-adds{
+    display: flex;
+    align-items: center;
+    // flex-direction: column;
+    // background-color: red;
+    height: 30px;
+  }
+  .left-banks-divs{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+    margin-left: 20px;
+    // background-color: red;
+    gap: 50px;
+    // background-color: #027A48;
+  }
+  .featured-cont{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 16px;
+  }
+  .featured-bar{
+    display: flex;
+    align-items: center;
+    height: 62px;
+    background-color: #F5FAFF;
+    border-radius: 12px;
+    padding-left: 10px;
+  }
+  .featured-img{
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+  }
+  .pro-com{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    color: #194185;
+  }
+  .progress-value{
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+    color: #175CD3;
+  }
+  .progress-container {
+    // background-color: #ffffff;
+    padding: 16px;
+    border-radius: 10px;
+    // box-shadow: 0 1px 3px 0 #1018281A;
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+  }
+  
+  .progress-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 14px;
+    color: #101828;
+  }
+  
+  .progress-bar {
+    background-color: #D1E9FF;
+    border-radius: 10px;
+    height: 8px;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .progress-fill {
+    height: 100%;
+    background-color: #175CD3; /* green */
+    border-radius: 10px 0 0 10px;
+    transition: width 0.3s ease-in-out;
+  }
+  
