@@ -5,9 +5,13 @@ import { BankComponent } from './Page/bank.component';
 import { TransactionComponent } from './Page/transaction.component';
 import { PaymentComponent } from './Page/payment.component';
 import { HomeComponent } from './Page/home.component';
+import { LoginComponent } from './Page/login.component';
+import { SignupComponent } from './Page/signup.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent }, 
+  { path: 'login', component: LoginComponent },
+  { path: 'signup', component: SignupComponent },
     {
         path: '',
         redirectTo: 'dashboard/home',
