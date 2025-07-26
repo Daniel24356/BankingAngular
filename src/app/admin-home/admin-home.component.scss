@@ -1,0 +1,125 @@
+.dashboard {
+  flex: 1;
+  padding: 2rem;
+  background-color: #f9fafb;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.search-box {
+  padding: 0.7rem 1rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  width: 300px;
+  font-size: 1rem;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.report-btn {
+  background-color: #0a65ff;
+  color: white;
+  padding: 0.7rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.user-box {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.notification {
+  font-size: 1.3rem;
+  position: relative;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  background-color: #0a65ff;
+  color: white;
+  font-weight: bold;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+}
+
+.user-info span {
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+.dashboard-header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.3rem;
+}
+
+.dashboard-header p {
+  color: #6b7280;
+  margin-bottom: 2rem;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  width: 250px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  color: #6b7280;
+  margin-bottom: 1rem;
+}
+
+.card h2 {
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.positive {
+  color: #059669;
+  font-weight: 500;
+}
+
+.negative {
+  color: #dc2626;
+  font-weight: 500;
+}
+
+.icon {
+  font-size: 1.2rem;
+}
+
+.green {
+  color: #059669;
+}
+
+.purple {
+  color: #7c3aed;
+}
+
+.orange {
+  color: #ea580c;
+}
