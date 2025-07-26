@@ -1,0 +1,113 @@
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  background: #ffffff;
+  border-right: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.sidebar-header {
+  padding: 1.5rem 1.2rem;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.logo-icon {
+  background-color: #0a65ff;
+  color: white;
+  font-weight: bold;
+  font-size: 1.3rem;
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+}
+
+.logo h2 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.logo span {
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+.sidebar-nav {
+  padding: 1.5rem 1.2rem;
+  flex-grow: 1;
+}
+
+.nav-title {
+  font-size: 0.75rem;
+  color: #9ca3af;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+
+.sidebar-nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar-nav li {
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  color: #374151;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.sidebar-nav li:hover {
+  background-color: #f3f4f6;
+}
+
+.sidebar-nav li.active {
+  background-color: #0a65ff;
+  color: white;
+  font-weight: 500;
+}
+
+.icon {
+  font-size: 1.1rem;
+}
+
+.sidebar-footer {
+  padding: 1rem 1.2rem;
+  border-top: 1px solid #f1f1f1;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.avatar {
+  width: 35px;
+  height: 35px;
+  background-color: #e5e7eb;
+  color: #111827;
+  display: grid;
+  place-items: center;
+  font-weight: bold;
+  border-radius: 50%;
+}
+
+.user-info p {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #6b7280;
+}
