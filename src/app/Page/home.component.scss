@@ -9,10 +9,22 @@
 .home-body{
     background-color: rgb(246,246,246);
 }
-.logo-nav{
-    object-fit: contain;
-    height: 34px;
+.logo-top{
+  // background-color: red;
+  height: 25px;
 }
+.home-header-left .logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.home-header-left .logo span {
+  color: orange;
+}
+// .logo-nav{
+//     object-fit: contain;
+//     height: 34px;
+// }
 .nav-home{
     margin-top: 20px;
     // display: flex;
