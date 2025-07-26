@@ -8,12 +8,22 @@ import { HomeComponent } from './Page/home.component';
 import { LoginComponent } from './Page/login.component';
 import { SignupComponent } from './Page/signup.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+import { AdminHomeComponent } from './admin-home/admin-home.component';
+import { UserManagementComponent } from './user-management/user-management.component';
+import { CreateUserComponent } from './create-user/create-user.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent }, 
   { path: 'login', component: LoginComponent },
   { path: 'signup', component: SignupComponent },
-  { path: 'admin', component: AdminDashboardComponent },
+  { path: 'admin', component: AdminDashboardComponent,
+    children: [
+      { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+      { path: 'dashboard', component: AdminHomeComponent },
+      { path: 'userManagement', component: UserManagementComponent },
+      { path: 'createUser', component: CreateUserComponent },
+    ]
+   },
   {
     path: 'dashboard',
     component: DashboardComponent,

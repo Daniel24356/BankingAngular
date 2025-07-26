@@ -1,6 +1,9 @@
+
 .form-container {
-  max-width: 900px;
+  max-width: 1000px;
   margin: auto;
+  margin-left: 270px;
+  margin-top: 40px;
 }
 
 .header {
@@ -40,6 +43,7 @@ h1 {
   padding: 30px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
   border: 1px solid #e5e7eb;
+  width: 950px;
 }
 
 .section-header {
@@ -108,6 +112,8 @@ h1 {
   display: flex;
   flex-direction: column;
   gap: 30px;
+  margin-left: 270px;
+  margin-top: 20px;
 }
 
 .card {
@@ -183,3 +189,12 @@ select:focus {
   border-color: #3b82f6;
   background-color: #ffffff;
 }
+
+// @media screen and (max-width: 1800px) {
+//     .form-container{
+//         width: 1500px;
+//     }
+//   .card {
+//     width: 1200px;
+//   }
+// }
