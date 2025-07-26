@@ -424,27 +424,85 @@
     animation: fadeInUp 1s ease-out forwards;
     animation-delay: 0.2s;
   }
-  
-.customer-div{
-    margin: 30px 90px 30px 90px;
+
+.testimonials {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #f8f8f8;
 }
-.customer-inner h1{
-    font-size: 35px;
-    text-align: center;
-    font-weight: 600;
+
+.testimonials h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  font-weight: bold;
+  line-height: 1.4;
 }
-.customer-innerall{
-    display: flex;
-    gap: 30px;
-    margin-top: 70px;
+
+.testimonial-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
 }
-.customer-innerdiv{
-    width: 350px;
-    background-color: white;
-    height: 400px;
-    border-radius: 10px;
-    padding: 40px 50px;
+
+.testimonial-card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  width: 320px;
+  text-align: left;
+  position: relative;
+  transition: transform 0.3s ease;
 }
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+}
+
+.quote-icon {
+  font-size: 24px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.testimonial-text {
+  font-size: 15px;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.user-info img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.user-info h4 {
+  margin: 0;
+  font-size: 16px;
+  color: #111;
+}
+
+.user-info p {
+  margin: 2px 0 6px;
+  font-size: 13px;
+  color: #666;
+}
+
+.stars {
+  color: #f39c12;
+  font-size: 14px;
+}
+
+
 .open-div{
     margin: 100px 90px 0px 90px;
     // display: flex;
@@ -461,7 +519,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-top: 100px;
+    padding-top: 80px;
 }
 .open-innerdiv h1{
     font-size: 37px;
@@ -604,30 +662,67 @@
 }
 
 
-// @media (max-width: 1500px) {
-//      .hero-me{
-//         width: 40%;
-//      }
-//      .hero-section{
-//         // margin: 100px 0px 100px 130px;
-//      }
-//      .trusted-partners{
-//         width: 1060px;
-//         margin: 100px auto 100px auto;
-//      }
-//      .checking-acc{
-//         width: 1060px;
-//         margin: 200px auto 100px auto;
-//      }
-//      .customer-div{
-//         width: 1060px;
-//         margin: 200px auto 100px auto;
-//      }
-//      .open-div{
-//         width: 1060px;
-//         margin: 200px auto 100px auto;
-//      }
-// }
+@media (max-width: 1800px) {
+     .hero-me{
+        width: 50%;
+     }
+     .herosection-txt-div h1{
+      font-size: 65px;
+      letter-spacing: 8px;
+      line-height: 90px;
+     }
+     .trusted-partners{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+     }
+     .checking-cont{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+     }
+     .open-top{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+     }
+     .open-div{
+      // background-color: red;
+     }
+    //  .hero-section{
+    //     // margin: 100px 0px 100px 130px;
+    //  }
+    //  .trusted-partners{
+    //     width: 1060px;
+    //     margin: 100px auto 100px auto;
+    //  }
+    //  .checking-acc{
+    //     width: 1060px;
+    //     margin: 200px auto 100px auto;
+    //  }
+    //  .customer-div{
+    //     width: 1060px;
+    //     margin: 200px auto 100px auto;
+    //  }
+  
+
+}
+ @media (max-width: 1490px) {
+    .herosection-txt-div h1{
+      font-size: 55px;
+      letter-spacing: 8px;
+      line-height: 90px;
+     }
+ }
+  @media (max-width: 1390px) {
+    .herosection-txt-div h1{
+      font-size: 35px;
+      letter-spacing: 8px;
+      line-height: 90px;
+     }
+ }
+
 @media (max-width: 1200px) {
   .hero-me{
     width: 50%;
@@ -659,6 +754,11 @@
         grid-template-columns: repeat(5, 1fr);
         
     }
+     .herosection-txt-div h1{
+      font-size: 35px;
+      letter-spacing: 8px;
+      line-height: 60px;
+     }
     .customer-innerall{
       display: grid;
       grid-template-columns: repeat(2, 1fr);
