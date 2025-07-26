@@ -6,63 +6,39 @@
     <title>Document</title>
 </head>
 <body>
-     <div class="payment-container">
-        <div>
-            <h2>Payment Transfer</h2>
-            <p>Please provide any specific details or notes related to the payment transfer</p>
-        </div>
-        <div>
-            <p>Transfer details</p>
-            <p>Enter the details of the recipient</p>
-        </div>
-        <div>
-            <div>
-                <p>Select Source Bank</p>
-                <p>Select the bank account you want to transfer funds from</p>
-            </div>
-            <div>
-                <p>Select Account</p>
-            </div>
-        </div>
-        <div>
-            <div>
-                <p>Transfer Note(Optional)</p>
-                <p>Please provide any additional information or instructions related to the transfer</p>
-            </div>
-            <div>
-                <textarea name="" id=""></textarea>
-            </div>
-        </div>
-        <div>
-            <h3>Bank account details</h3>
-            <p>Enter the bank account details of the recipient</p>
-        </div>
-        <div>
-            <div>
-                <p>Recipient Emails Address</p>
-            </div>
-            <div>
-                <input type="email" placeholder="email">
-            </div>
-        </div>
-        <div>
-            <div>
-                <p>Recipient Bank Account Number</p>
-            </div>
-            <div>
-                <input type="number" placeholder="Enter the account number">
-            </div>
-        </div>
-        <div>
-            <div>
-                <p>Amount</p>
-            </div>
-            <div>
-                <input type="number" placeholder="amount">
-            </div>
-        </div>
-        <button>Transfer Funds</button>
+     <div class="transfer-container">
+    <h2>Payment Transfer</h2>
+    <p class="subtext">Please provide any specific details or notes related to the payment transfer</p>
+
+    <form id="transferForm">
+      <!-- Transfer Details -->
+      <div class="section">
+        <h3>Transfer details</h3>
+        <label for="fromAccount">Select Source Bank</label>
+        <select id="fromAccount" name="fromAccount" required>
+          <option value="">Select Account</option>
+          <option value="0600140000003">0600140000003 - Access Bank</option>
+          <option value="0600140000005">0600140000005 - GTBank</option>
+        </select>
+
+        <label for="note">Transfer Note (Optional)</label>
+        <textarea id="note" rows="5" placeholder="Enter a note..."></textarea>
       </div>
+
+      <!-- Bank Account Details -->
+      <div class="section">
+        <h3>Bank account details</h3>
+
+        <label for="toAccount">Recipient’s Bank Account Number</label>
+        <input type="text" id="toAccount" name="toAccount" placeholder="Enter the account number" required />
+
+        <label for="amount">Amount</label>
+        <input type="number" id="amount" name="amount" placeholder="Enter the amount" required />
+      </div>
+
+      <button type="submit">Transfer Funds</button>
+    </form>
+  </div>
       
 </body>
 </html>
