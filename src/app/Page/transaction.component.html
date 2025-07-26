@@ -6,34 +6,85 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="transaction-container">
-        <div>
-            <div>
-                <h2>Transaction History</h2>
-                <p>Gain Insights and Track Your Transaction Over Time</p>
-            </div>
-            <div>
-                <p>Select Account</p>
-            </div>
-        </div>
-        <div>
-            <div>
-                <h3>Chase</h3>
-                <p>Chase Growth Savings Account</p>
-                <div>.... .... .... 9999</div>
-            </div>
-            <div>
-                <p>Current Balance</p>
-                <h1>$41,382.80</h1>
-            </div>
-        </div>
-        <div>
-            <p>Transaction history</p>
-            <div>
-                <p>Apply filter</p>
-            </div>
-        </div>
-       
+   <div class="containers">
+    <h2>Transaction history</h2>
+    <p class="subtext">Gain Insights and Track Your Transactions Over Time</p>
+
+    <div class="account-card">
+      <div>
+        <h3>Chase</h3>
+        <p class="account-details">Chase Growth Savings Account •••• 9999</p>
       </div>
+      <div class="balance-box">$41,382.80</div>
+    </div>
+
+    <div class="transaction-table">
+      <table>
+        <thead>
+          <tr>
+            <th>Transaction</th>
+            <th>Amount</th>
+            <th>Status</th>
+            <th>Date</th>
+            <th>Category</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Spotify</td>
+            <td class="amount negative">- $15.00</td>
+            <td><span class="status processing">Processing</span></td>
+            <td>Wed 1:00pm</td>
+            <td><span class="category subscriptions">Subscriptions</span></td>
+          </tr>
+          <tr>
+            <td>Alexa Doe</td>
+            <td class="amount positive">+ $88.00</td>
+            <td><span class="status success">Success</span></td>
+            <td>Wed 2:45am</td>
+            <td><span class="category deposit">Deposit</span></td>
+          </tr>
+          <tr>
+            <td>JSM Pro</td>
+            <td class="amount negative">- $18.99</td>
+            <td><span class="status processing">Processing</span></td>
+            <td>Mon 1:10pm</td>
+            <td><span class="category subscriptions">Subscriptions</span></td>
+          </tr>
+          <tr>
+            <td>Fresh F&V</td>
+            <td class="amount negative">- $88.00</td>
+            <td><span class="status success">Success</span></td>
+            <td>Tue 12:15pm</td>
+            <td><span class="category groceries">Groceries</span></td>
+          </tr>
+          <tr>
+            <td>Figma</td>
+            <td class="amount positive">+ $18.99</td>
+            <td><span class="status processing">Processing</span></td>
+            <td>Tue 6:10pm</td>
+            <td><span class="category income">Income</span></td>
+          </tr>
+          <tr>
+            <td>Sam Sulek</td>
+            <td class="amount negative">- $40.20</td>
+            <td><span class="status declined">Declined</span></td>
+            <td>Tue 5:40am</td>
+            <td><span class="category food">Food and dining</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="pagination">
+      <button>&laquo; Previous</button>
+      <button class="active">1</button>
+      <button>2</button>
+      <button>3</button>
+      <button>...</button>
+      <button>10</button>
+      <button>Next &raquo;</button>
+    </div>
+  </div>
 </body>
 </html>
