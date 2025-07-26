@@ -7,6 +7,11 @@
   flex-direction: column;
   justify-content: space-between;
   font-family: 'Segoe UI', sans-serif;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+  z-index: 1000;
 }
 
 .sidebar-header {
