@@ -1,30 +1,44 @@
+/* Main Dashboard Container */
 .dashboard {
   flex: 1;
-  padding: 2rem;
+  padding: 0 0 0.7rem 0rem;
   background-color: #f9fafb;
+  min-width: 0;
+  max-width: 1600px; /* Keeps layout centered on ultrawide screens */
+  margin: 0 auto;
 }
 
+/* Top Navigation Bar */
 .navbar {
   display: flex;
+   padding: 0.7rem 2rem 0.7rem 2rem;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
   margin-bottom: 2rem;
+  background-color: white;
 }
 
+/* Search Input */
 .search-box {
+//   flex: 1;
+  min-width: 250px;
   padding: 0.7rem 1rem;
   border: 1px solid #e5e7eb;
   border-radius: 8px;
-  width: 300px;
   font-size: 1rem;
 }
 
+/* Right Side Actions (Report + Profile) */
 .actions {
   display: flex;
   align-items: center;
   gap: 1rem;
+  flex-shrink: 0;
 }
 
+/* Report Button */
 .report-btn {
   background-color: #0a65ff;
   color: white;
@@ -35,6 +49,7 @@
   cursor: pointer;
 }
 
+/* Profile Info */
 .user-box {
   display: flex;
   align-items: center;
@@ -43,7 +58,6 @@
 
 .notification {
   font-size: 1.3rem;
-  position: relative;
 }
 
 .avatar {
@@ -57,11 +71,21 @@
   border-radius: 50%;
 }
 
+.user-info{
+    display: flex;
+    flex-direction: column;
+}
+
 .user-info span {
   font-size: 0.85rem;
   color: #6b7280;
 }
 
+.dashboard-header{
+      padding: 0.7rem 2rem 0.7rem 2rem;
+}
+
+/* Dashboard Heading */
 .dashboard-header h1 {
   font-size: 2rem;
   margin-bottom: 0.3rem;
@@ -72,20 +96,28 @@
   margin-bottom: 2rem;
 }
 
+/* Metric Cards Container */
 .cards {
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;
+  justify-content: flex-start;
+    padding: 0 2rem 0.7rem 2rem;
 }
 
+/* Individual Card */
 .card {
   background-color: white;
   border-radius: 12px;
   padding: 1.5rem;
-  width: 250px;
+  flex: 1 1 calc(25% - 1.5rem); /* Default: 4 cards per row */
+  min-width: 270px;
+  max-width: calc(25% - 1.5rem);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease;
 }
 
+/* Card Header (Title + Icon) */
 .card-header {
   display: flex;
   justify-content: space-between;
@@ -93,11 +125,13 @@
   margin-bottom: 1rem;
 }
 
+/* Card Value */
 .card h2 {
   font-size: 1.6rem;
   margin-bottom: 0.5rem;
 }
 
+/* Growth Indicators */
 .positive {
   color: #059669;
   font-weight: 500;
@@ -108,18 +142,45 @@
   font-weight: 500;
 }
 
+/* Icons by Color */
 .icon {
   font-size: 1.2rem;
 }
-
 .green {
   color: #059669;
 }
-
 .purple {
   color: #7c3aed;
 }
-
 .orange {
   color: #ea580c;
+}
+
+/* Responsive Card Grid Adjustments */
+@media screen and (min-width: 1600px) {
+  .card {
+    flex: 1 1 calc(20% - 1.5rem); /* 5 cards per row */
+    max-width: calc(20% - 1.5rem);
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .card {
+    flex: 1 1 calc(33.333% - 1.5rem); /* 3 cards per row */
+    max-width: calc(33.333% - 1.5rem);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .card {
+    flex: 1 1 calc(50% - 1.5rem); /* 2 cards per row */
+    max-width: calc(50% - 1.5rem);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .card {
+    flex: 1 1 100%; /* Full width on mobile */
+    max-width: 100%;
+  }
 }

@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
+import { MatIconModule } from '@angular/material/icon';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 @Component({
   selector: 'app-admin-home',
-  imports: [],
+  imports: [MatToolbarModule, MatIconModule],
   templateUrl: './admin-home.component.html',
   styleUrl: './admin-home.component.scss'
 })
