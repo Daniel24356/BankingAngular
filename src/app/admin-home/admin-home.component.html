@@ -10,7 +10,6 @@
   <div class="navbar">
     <input class="search-box" type="text" placeholder="Search..." />
     <div class="actions">
-      <!-- <button class="report-btn">Generate Report</button> -->
       <div class="user-box">
         <mat-icon class="notification">notifications</mat-icon>
         <div class="avatar">A</div>
@@ -21,10 +20,14 @@
       </div>
     </div>
   </div>
+ 
 
   <div class="dashboard-header">
-    <h1>Dashboard</h1>
+    <div class="dashboard-header-inner">
+      <h1>Dashboard</h1>
     <p>Welcome back! Here's what's happening today.</p>
+    </div>
+      <button class="report-btn">Generate Report</button>
   </div>
 
   <div class="cards">
@@ -62,6 +65,81 @@
       </div>
       <h2>11,203</h2>
       <p class="negative">↓ -2.4% vs last month</p>
+    </div>
+  </div>
+
+    <div class="container">
+    <h2>Recent Transactions</h2>
+    <p class="subtitle">Latest customer transactions requiring attention</p>
+
+    <div class="transaction">
+      <div class="info">
+        <div class="icon"> <mat-icon class="blue">credit_card</mat-icon></div>
+        <div>
+          <p class="name">John Doe</p>
+          <p class="meta">TXN001 • Deposit</p>
+        </div>
+      </div>
+      <div class="details">
+        <p class="amount">$2,450.00</p>
+        <span class="status completed">Completed</span>
+      </div>
+    </div>
+
+    <div class="transaction">
+      <div class="info">
+        <div class="icon"> <mat-icon class="blue">credit_card</mat-icon></div>
+        <div>
+          <p class="name">Jane Smith</p>
+          <p class="meta">TXN002 • Withdrawal</p>
+        </div>
+      </div>
+      <div class="details">
+        <p class="amount">$1,200.00</p>
+        <span class="status pending">Pending</span>
+      </div>
+    </div>
+
+    <div class="transaction">
+      <div class="info">
+        <div class="icon"> <mat-icon class="blue">credit_card</mat-icon></div>
+        <div>
+          <p class="name">Bob Johnson</p>
+          <p class="meta">TXN003 • Transfer</p>
+        </div>
+      </div>
+      <div class="details">
+        <p class="amount">$3,800.00</p>
+        <span class="status completed">Completed</span>
+      </div>
+    </div>
+
+    <div class="transaction">
+      <div class="info">
+        <div class="icon"> <mat-icon class="blue">credit_card</mat-icon></div>
+        <div>
+          <p class="name">Alice Brown</p>
+          <p class="meta">TXN004 • Payment</p>
+        </div>
+      </div>
+      <div class="details">
+        <p class="amount">$950.00</p>
+        <span class="status failed">Failed</span>
+      </div>
+    </div>
+
+    <div class="transaction">
+      <div class="info">
+        <div class="icon"> <mat-icon class="blue">credit_card</mat-icon></div>
+        <div>
+          <p class="name">Charlie Wilson</p>
+          <p class="meta">TXN005 • Deposit</p>
+        </div>
+      </div>
+      <div class="details">
+        <p class="amount">$5,200.00</p>
+        <span class="status completed">Completed</span>
+      </div>
     </div>
   </div>
 </div>

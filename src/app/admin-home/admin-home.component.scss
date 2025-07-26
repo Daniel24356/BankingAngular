@@ -82,7 +82,16 @@
 }
 
 .dashboard-header{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
       padding: 0.7rem 2rem 0.7rem 2rem;
+    //   background-color: red;
+    margin-bottom: 30px;
+}
+.dashboard-header-inner{
+    // background-color: #059669;
+    height: 50px;
 }
 
 /* Dashboard Heading */
@@ -154,6 +163,100 @@
 }
 .orange {
   color: #ea580c;
+}
+
+.container {
+  max-width: 94%;
+  margin: auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 25px;
+}
+
+.transaction {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.transaction:last-child {
+  border-bottom: none;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.icon {
+  background-color: #eaf1ff;
+  color: #3f7efc;
+  font-size: 20px;
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+}
+
+.name {
+  font-weight: 600;
+  color: #333;
+}
+
+.meta {
+  font-size: 13px;
+  color: #888;
+}
+
+.details {
+  text-align: right;
+}
+
+.amount {
+  font-weight: 600;
+  color: #333;
+}
+
+.status {
+  display: inline-block;
+  margin-top: 5px;
+  padding: 4px 10px;
+  font-size: 12px;
+  border-radius: 12px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.status.completed {
+  background-color: #e6f6ed;
+  color: #2e9a5e;
+}
+
+.status.pending {
+  background-color: #fff3cd;
+  color: #d39e00;
+}
+
+.status.failed {
+  background-color: #f8d7da;
+  color: #a94442;
 }
 
 /* Responsive Card Grid Adjustments */
