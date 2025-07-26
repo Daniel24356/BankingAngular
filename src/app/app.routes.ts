@@ -7,11 +7,13 @@ import { PaymentComponent } from './Page/payment.component';
 import { HomeComponent } from './Page/home.component';
 import { LoginComponent } from './Page/login.component';
 import { SignupComponent } from './Page/signup.component';
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent }, 
   { path: 'login', component: LoginComponent },
   { path: 'signup', component: SignupComponent },
+  { path: 'admin', component: AdminDashboardComponent },
   {
     path: 'dashboard',
     component: DashboardComponent,
