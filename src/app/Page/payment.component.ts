@@ -11,7 +11,7 @@ import { FormsModule } from '@angular/forms';
   styleUrls: ['./payment.component.scss']
 })
 export class PaymentComponent {
-  transferData = {
+  paymentData = {
     fromAccount: '',
     toAccount: '',
     amount: ''
@@ -20,7 +20,7 @@ export class PaymentComponent {
    constructor(private http: HttpClient) {}
 
      onTransfer() {
-    this.http.post('/fund-transfers', this.transferData).subscribe({
+    this.http.post('/fund-transfers', this.paymentData).subscribe({
       next: (res) => console.log('Transfer successful', res),
       error: (err) => console.error('Transfer failed', err)
     });
