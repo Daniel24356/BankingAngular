@@ -13,8 +13,8 @@
 
 .navbar {
   display: flex;
-  width: 1030px;
-   padding: 0.7rem 2rem 0.7rem 2rem;
+  width: 1025px;
+  padding: 0.7rem 2rem 0.7rem 2rem;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
@@ -288,11 +288,146 @@ select:focus {
   cursor: pointer;
 }
 
-// @media screen and (max-width: 1800px) {
-//     .form-container{
-//         width: 1500px;
-//     }
-//   .card {
-//     width: 1200px;
-//   }
-// }
+@media screen and (max-width: 1600px) {
+.navbar{
+    width: 1280px;
+}
+.form-wrapper{
+   max-width: 1200px;
+}
+.card{
+    width: 1200px;
+}
+.header{
+    width: 1250px;
+}
+.dashboard{
+    width: 1300px;
+}
+}
+
+@media screen and (max-width: 1520px) {
+.navbar{
+    width: 1240px;
+}
+.form-wrapper{
+   max-width: 1160px;
+}
+.card{
+    width: 1160px;
+}
+.header{
+    width: 1190px;
+}
+.dashboard{
+    width: 1260px;
+}
+}
+
+@media screen and (max-width: 1491px) {
+.navbar{
+    width: 1200px;
+}
+.form-wrapper{
+   max-width: 1120px;
+}
+.card{
+    width: 1120px;
+}
+.header{
+    width: 1150px;
+}
+.dashboard{
+    width: 1240px;
+}
+}
+
+@media screen and (max-width: 1442px) {
+.navbar{
+    width: 1150px;
+}
+.form-wrapper{
+   max-width: 1160px;
+}
+.card{
+    width: 1080px;
+}
+.header{
+    width: 1120px;
+}
+.dashboard{
+    width: 1240px;
+}
+}
+
+@media screen and (max-width: 1442px) {
+.navbar{
+    width: 1150px;
+}
+.form-wrapper{
+   max-width: 1160px;
+}
+.card{
+    width: 1080px;
+}
+.header{
+    width: 1120px;
+}
+.dashboard{
+    width: 1240px;
+}
+}
+
+@media screen and (max-width: 1396px) {
+.navbar{
+    width: 1100px;
+}
+.form-wrapper{
+   max-width: 1160px;
+}
+.card{
+    width: 1030px;
+}
+.header{
+    width: 1080px;
+}
+.dashboard{
+    width: 1240px;
+}
+}
+
+@media screen and (max-width: 1340px) {
+.navbar{
+    width: 1050px;
+}
+.form-wrapper{
+   max-width: 1160px;
+}
+.card{
+    width: 980px;
+}
+.header{
+    width: 1030px;
+}
+.dashboard{
+    width: 1240px;
+}
+}
+
+@media screen and (max-width: 1291px) {
+.navbar{
+    width: 1000px;
+}
+.form-wrapper{
+   max-width: 1160px;
+}
+.card{
+    width: 930px;
+}
+.header{
+    width: 980px;
+}
+.dashboard{
+    width: 1240px;
+}
+}
