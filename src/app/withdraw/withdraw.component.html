@@ -6,20 +6,20 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="withdraw-container">
+  <div class="withdraw-container">
   <h2>Withdraw Funds</h2>
-  <p class="subtext">Enter details to process a withdrawal from a customer's account</p>
+  <p class="subtitle">Withdraw money from your account securely.</p>
 
-  <form (ngSubmit)="withdrawFunds()">
+  <form (ngSubmit)="withdrawFunds()" #withdrawForm="ngForm">
     <div class="form-group">
-      <label for="accountId">Account ID</label>
+      <label for="transactionType">Transaction Type</label>
       <input
         type="text"
-        id="accountId"
-        name="accountId"
-        [(ngModel)]="formData.accountId"
-        placeholder="0600140000001"
-        required
+        id="transactionType"
+        name="transactionType"
+        value="WITHDRAWAL"
+        readonly
+        class="readonly-input"
       />
     </div>
 
@@ -30,7 +30,6 @@
         id="amount"
         name="amount"
         [(ngModel)]="formData.amount"
-        placeholder="Enter amount"
         required
       />
     </div>
@@ -40,13 +39,15 @@
       <textarea
         id="description"
         name="description"
+        rows="3"
         [(ngModel)]="formData.description"
-        placeholder="Description of transaction"
+        placeholder="e.g. ATM withdrawal"
       ></textarea>
     </div>
 
-    <button type="submit">Withdraw</button>
-    <p *ngIf="message">{{ message }}</p>
+    <button type="submit" [disabled]="!withdrawForm.form.valid">
+      Submit Withdrawal
+    </button>
   </form>
 </div>
 

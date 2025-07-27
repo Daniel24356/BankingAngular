@@ -21,5 +21,22 @@ export class WithdrawComponent {
 
   constructor(private http: HttpClient) {}
 
-  
+   withdrawFunds() {
+    if (!this.formData.accountId || !this.formData.amount) {
+      this.message = 'Please provide account ID and amount.';
+      return;
+    }
+
+    this.http.post('/api/transactions', this.formData).subscribe({
+      next: (res) => {
+        this.message = 'Withdrawal successful.';
+        this.formData.amount = '';
+        this.formData.description = '';
+      },
+      error: (err) => {
+        this.message = 'Withdrawal failed.';
+        console.error(err);
+      },
+    });
+  }
 }
