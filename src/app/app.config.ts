@@ -12,6 +12,6 @@ export const appConfig: ApplicationConfig = {
     provideAnimations(),
     provideRouter(routes),
     provideHttpClient(withInterceptorsFromDi()),
-    // { provide: HTTP_INTERCEPTORS, useClass: BaseUrlInterceptor, multi: true }
+    { provide: HTTP_INTERCEPTORS, useClass: BaseUrlInterceptor, multi: true }
   ]
 };
