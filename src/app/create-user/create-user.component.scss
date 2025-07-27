@@ -1,9 +1,95 @@
+.dashboard {
+  flex: 1;
+  padding-top: 40px;
+//   padding: 1rem 1rem 1rem 1rem;
+  background-color: #f9fafb;
+//   min-width: 0;
+//   max-width: 1600px; /* Keeps layout centered on ultrawide screens */
+  width:1200px;
+  height: 100vh;
+  margin: 0 auto;
+  margin-left: 250px;
+}
+
+.navbar {
+  display: flex;
+  width: 1030px;
+   padding: 0.7rem 2rem 0.7rem 2rem;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+//   margin-bottom: 2rem;
+  margin-left: 250px;
+  background-color: white;
+}
+
+/* Search Input */
+.search-box {
+//   flex: 1;
+  min-width: 250px;
+  padding: 0.7rem 1rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+/* Right Side Actions (Report + Profile) */
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-shrink: 0;
+}
+
+/* Report Button */
+.report-btn {
+  background-color: #0a65ff;
+  color: white;
+  padding: 0.7rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* Profile Info */
+.user-box {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.notification {
+  font-size: 1.3rem;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  background-color: #0a65ff;
+  color: white;
+  font-weight: bold;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+}
+
+.user-info{
+    display: flex;
+    flex-direction: column;
+}
+
+.user-info span {
+  font-size: 0.85rem;
+  color: #6b7280;
+}
 
 .form-container {
   max-width: 1000px;
-  margin: auto;
-  margin-left: 270px;
-  margin-top: 40px;
+//   margin: auto;
+//   margin-left: 270px;
+//   margin-top: 40px;
 }
 
 .header {
@@ -11,6 +97,7 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 25px;
+  padding-left: 40px;
 }
 
 h1 {
@@ -107,12 +194,12 @@ h1 {
 
 // second half
 .form-wrapper {
-  max-width: 950px;
+  max-width: 1120px;
   margin: auto;
   display: flex;
   flex-direction: column;
   gap: 30px;
-  margin-left: 270px;
+//   margin-left: 270px;
   margin-top: 20px;
 }
 
