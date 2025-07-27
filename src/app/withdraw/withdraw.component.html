@@ -1,1 +1,54 @@
-<p>withdraw works!</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="withdraw-container">
+  <h2>Withdraw Funds</h2>
+  <p class="subtext">Enter details to process a withdrawal from a customer's account</p>
+
+  <form (ngSubmit)="withdrawFunds()">
+    <div class="form-group">
+      <label for="accountId">Account ID</label>
+      <input
+        type="text"
+        id="accountId"
+        name="accountId"
+        [(ngModel)]="formData.accountId"
+        placeholder="0600140000001"
+        required
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="amount">Amount</label>
+      <input
+        type="number"
+        id="amount"
+        name="amount"
+        [(ngModel)]="formData.amount"
+        placeholder="Enter amount"
+        required
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="description">Description</label>
+      <textarea
+        id="description"
+        name="description"
+        [(ngModel)]="formData.description"
+        placeholder="Description of transaction"
+      ></textarea>
+    </div>
+
+    <button type="submit">Withdraw</button>
+    <p *ngIf="message">{{ message }}</p>
+  </form>
+</div>
+
+</body>
+</html>
