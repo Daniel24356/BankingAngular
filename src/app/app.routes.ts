@@ -11,6 +11,7 @@ import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.compo
 import { AdminHomeComponent } from './admin-home/admin-home.component';
 import { UserManagementComponent } from './user-management/user-management.component';
 import { CreateUserComponent } from './create-user/create-user.component';
+import { WithdrawComponent } from './withdraw/withdraw.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent }, 
@@ -32,7 +33,8 @@ export const routes: Routes = [
       { path: 'home', component: RightSideComponent },
       { path: 'bank', component: BankComponent },
       { path: 'transaction', component: TransactionComponent },
-      { path: 'payment', component: PaymentComponent }
+      { path: 'payment', component: PaymentComponent },
+       { path: 'withdrawal', component: WithdrawComponent }
     ]
   },
   // fallback route if user enters unknown URL
