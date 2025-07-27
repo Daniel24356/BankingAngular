@@ -34,7 +34,7 @@ export const routes: Routes = [
       { path: 'bank', component: BankComponent },
       { path: 'transaction', component: TransactionComponent },
       { path: 'payment', component: PaymentComponent },
-       { path: 'withdrawal', component: WithdrawComponent }
+      { path: 'withdrawal', component: WithdrawComponent }
     ]
   },
   // fallback route if user enters unknown URL

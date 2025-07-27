@@ -1,72 +1,208 @@
-.withdraw-container {
-  max-width: 500px;
-  margin: 2rem auto;
-  padding: 2rem;
-  background: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-  font-family: 'Segoe UI', sans-serif;
+.dashboard {
+  flex: 1;
+  padding-top: 40px;
+  background-color: #f9fafb;
+  width: 1200px;
+  height: 100vh;
+  margin: 0 auto;
+  margin-left: 280px;
 }
 
-.withdraw-container h2 {
-  font-size: 1.8rem;
-  margin-bottom: 0.5rem;
-  color: #2c3e50;
+.navbar {
+  display: flex;
+  width: 1025px;
+  padding: 0.7rem 2rem;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-left: 250px;
+  background-color: white;
+}
+
+.search-box {
+  min-width: 250px;
+  padding: 0.7rem 1rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.user-box {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.notification {
+  font-size: 1.3rem;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  background-color: #0a65ff;
+  color: white;
+  font-weight: bold;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-info span {
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+/* Form Container */
+.form-container {
+  max-width: 1000px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  padding-left: 40px;
+}
+
+h1 {
+  font-size: 28px;
+  margin: 0;
 }
 
 .subtitle {
-  color: #7f8c8d;
-  margin-bottom: 1.5rem;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.cancel-btn {
+  background: none;
+  border: none;
+  font-size: 16px;
+  color: #374151;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: background 0.2s ease;
+}
+
+.cancel-btn:hover {
+  background-color: #f3f4f6;
+}
+
+/* Card */
+.card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e5e7eb;
+  width: 950px;
+  margin-left: 35px;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.icon {
+  font-size: 20px;
+  margin-right: 12px;
+  color: #3b82f6;
+}
+
+.section-header h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.section-subtitle {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+/* Form */
+.form-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 .form-group {
-  margin-bottom: 1.2rem;
+  flex: 1;
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
 }
 
-label {
-  display: block;
-  font-weight: 600;
-  margin-bottom: 0.4rem;
-  color: #34495e;
+.form-group label {
+  margin-bottom: 6px;
+  font-weight: 500;
+  font-size: 14px;
+  color: #374151;
 }
 
 input,
-textarea {
-  width: 100%;
-  padding: 0.75rem;
-  border: 1px solid #dcdde1;
+select {
+  padding: 10px 14px;
+  font-size: 14px;
   border-radius: 8px;
-  font-size: 1rem;
-  transition: border-color 0.3s;
+  border: 1px solid #e5e7eb;
+  background-color: #f9fafb;
+  transition: border-color 0.2s, background-color 0.2s;
 }
 
 input:focus,
-textarea:focus {
-  border-color: #3498db;
+select:focus {
   outline: none;
+  border-color: #3b82f6;
+  background-color: #ffffff;
 }
 
-.readonly-input {
-  background-color: #ecf0f1;
+.readonly {
+  background-color: #e5e7eb;
+  color: #6b7280;
   cursor: not-allowed;
 }
 
-button {
-  background-color: #2980b9;
+.createBtn {
+  background-color: rgb(1,121,254);
   color: white;
-  padding: 0.8rem 1.5rem;
+  padding: 0.7rem 1.2rem;
   border: none;
   border-radius: 8px;
-  font-size: 1rem;
+  font-weight: 500;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
-button:disabled {
-  background-color: #95a5a6;
-  cursor: not-allowed;
+.createBtn:hover {
+  background-color: #084ec6;
 }
 
-button:hover:not(:disabled) {
-  background-color: #1c5980;
+.success-msg {
+  color: #10b981;
+  font-size: 14px;
+  margin-top: 10px;
 }

@@ -2,10 +2,12 @@ import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { MatIconModule } from '@angular/material/icon';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 @Component({
   selector: 'app-withdraw',
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, MatToolbarModule, MatIconModule,],
   templateUrl: './withdraw.component.html',
   styleUrl: './withdraw.component.scss'
 })
