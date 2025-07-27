@@ -6,24 +6,11 @@ import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-transaction',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [],
   templateUrl: './transaction.component.html',
   styleUrls: ['./transaction.component.scss']
 })
 export class TransactionComponent {
-  transferData = {
-    fromAccount: '',
-    toAccount: '',
-    amount: ''
-  };
-
- constructor(private http: HttpClient) {}
- 
-  onTransfer() {
-    this.http.post('/fund-transfers', this.transferData).subscribe({
-      next: (res) => console.log('Transfer successful', res),
-      error: (err) => console.error('Transfer failed', err)
-    });
-  }
+  
 
 }
