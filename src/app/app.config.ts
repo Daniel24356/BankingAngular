@@ -6,6 +6,7 @@ import { routes } from './app.routes';
 import { HTTP_INTERCEPTORS, provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { BaseUrlInterceptor } from './interceptor/base-url.interceptor';
 import { provideKeycloak } from 'keycloak-angular';
+import { provideCharts, withDefaultRegisterables } from 'ng2-charts';
 // import { keycloakInitializer } from './keycloak.service';
 
 export const appConfig: ApplicationConfig = {
@@ -25,6 +26,7 @@ export const appConfig: ApplicationConfig = {
     checkLoginIframe: false
   }
 }),
+provideCharts(withDefaultRegisterables()),
     // keycloakInitializer,
     { provide: HTTP_INTERCEPTORS, useClass: BaseUrlInterceptor, multi: true }
   ]
