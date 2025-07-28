@@ -5,6 +5,8 @@ import { provideAnimations } from '@angular/platform-browser/animations';
 import { routes } from './app.routes';
 import { HTTP_INTERCEPTORS, provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { BaseUrlInterceptor } from './interceptor/base-url.interceptor';
+import { provideKeycloak } from 'keycloak-angular';
+// import { keycloakInitializer } from './keycloak.service';
 
 export const appConfig: ApplicationConfig = {
   providers:
@@ -12,6 +14,18 @@ export const appConfig: ApplicationConfig = {
     provideAnimations(),
     provideRouter(routes),
     provideHttpClient(withInterceptorsFromDi()),
+    provideKeycloak({
+  config: {
+    url: 'http://localhost:8080',  // 🔁 replace this
+    realm: 'master',                        // 🔁 replace this
+    clientId: 'angular-client'                  // 🔁 replace this
+  },
+  initOptions: {
+    onLoad: 'login-required',
+    checkLoginIframe: false
+  }
+}),
+    // keycloakInitializer,
     { provide: HTTP_INTERCEPTORS, useClass: BaseUrlInterceptor, multi: true }
   ]
 };
