@@ -116,9 +116,10 @@
 padding-left: 2rem;
 padding-right: 2rem;
 padding-bottom: 2rem;
-  flex-wrap: wrap;
-  width: 1255px;
-  background-color: red;
+//   flex-wrap: wrap;
+  width: 1350px;
+// width: 100%;
+//   background-color: red;
 }
 
 .card {
@@ -127,7 +128,8 @@ padding-bottom: 2rem;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
   padding: 1.5rem;
   width: 100%;
-  max-width: 600px;
+//   max-width: 600px;
+//  width: 100%;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -162,4 +164,42 @@ padding-bottom: 2rem;
 
 .chart-container {
   height: 300px;
+  width: 100%;
 }
+
+@media screen and (max-width: 1550px) {
+ .dashboard-container{
+    width: 1200px;
+ }
+}
+@media screen and (max-width: 1450px) {
+ .dashboard-container{
+    width: 1190px;
+ }
+}
+@media screen and (max-width: 1400px) {
+ .dashboard-container{
+    width: 1150px;
+ }
+}
+@media screen and (max-width: 1350px) {
+ .dashboard-container{
+    width: 1050px;
+ }
+}
+@media screen and (max-width: 1300px) {
+ .dashboard-container{
+    width: 1020px;
+ }
+}
+// @media screen and (max-width: 1260px) {
+//  .dashboard-container{
+//     width: 1000px;
+//  }
+// }
+
+// @media screen and (max-width: 1260px) {
+//  .dashboard-container{
+//     width: 980px;
+//  }
+// }
