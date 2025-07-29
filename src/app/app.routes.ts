@@ -13,6 +13,7 @@ import { UserManagementComponent } from './user-management/user-management.compo
 import { CreateUserComponent } from './create-user/create-user.component';
 import { WithdrawComponent } from './withdraw/withdraw.component';
 import { AdminTransactionComponent } from './admin-transaction/admin-transaction.component';
+import { AdminAnalyticsComponent } from './admin-analytics/admin-analytics.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent }, 
@@ -25,6 +26,7 @@ export const routes: Routes = [
       { path: 'userManagement', component: UserManagementComponent },
       { path: 'createUser', component: CreateUserComponent },
       { path: 'transaction', component: AdminTransactionComponent },
+      { path: 'analytics', component: AdminAnalyticsComponent },
     ]
    },
   {

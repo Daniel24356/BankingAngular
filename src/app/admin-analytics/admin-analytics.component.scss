@@ -109,8 +109,12 @@
 .dashboard-container {
   display: flex;
   gap: 2rem;
-  padding: 2rem;
+//   padding: 2rem;
+padding-left: 2rem;
+padding-right: 2rem;
+padding-bottom: 2rem;
   flex-wrap: wrap;
+  width: 1020px;
 }
 
 .card {
