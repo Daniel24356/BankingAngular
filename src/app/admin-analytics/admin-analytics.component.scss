@@ -4,9 +4,11 @@
   padding: 0 0 0.7rem 0rem;
   background-color: #f9fafb;
   min-width: 0;
-  max-width: 1600px; /* Keeps layout centered on ultrawide screens */
+//   max-width: 100%;
+  max-width: 1600px;
   margin: 0 auto;
   margin-left: 250px;
+//   background-color: red;
 }
 
 /* Top Navigation Bar */
@@ -58,6 +60,7 @@
     //   background-color: red;
     margin-bottom: 30px;
 }
+
 .dashboard-header-inner{
     // background-color: #059669;
     height: 50px;
@@ -114,7 +117,8 @@ padding-left: 2rem;
 padding-right: 2rem;
 padding-bottom: 2rem;
   flex-wrap: wrap;
-  width: 1020px;
+  width: 1255px;
+  background-color: red;
 }
 
 .card {
