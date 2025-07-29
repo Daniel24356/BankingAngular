@@ -1,0 +1,157 @@
+/* Main Dashboard Container */
+.dashboard {
+  flex: 1;
+  padding: 0 0 0.7rem 0rem;
+  background-color: #f9fafb;
+  min-width: 0;
+  max-width: 1600px; /* Keeps layout centered on ultrawide screens */
+  margin: 0 auto;
+  margin-left: 250px;
+}
+
+/* Top Navigation Bar */
+.navbar {
+  display: flex;
+   padding: 0.7rem 2rem 0.7rem 2rem;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  background-color: white;
+}
+
+/* Search Input */
+.search-box {
+//   flex: 1;
+  min-width: 250px;
+  padding: 0.7rem 1rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+/* Right Side Actions (Report + Profile) */
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-shrink: 0;
+}
+
+/* Report Button */
+.report-btn {
+  background-color: #0a65ff;
+  color: white;
+  padding: 0.7rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.dashboard-header{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.7rem 2rem 0.7rem 2rem;
+    //   background-color: red;
+    margin-bottom: 30px;
+}
+.dashboard-header-inner{
+    // background-color: #059669;
+    height: 50px;
+}
+
+/* Dashboard Heading */
+.dashboard-header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.3rem;
+}
+
+.dashboard-header p {
+  color: #6b7280;
+  margin-bottom: 2rem;
+}
+
+/* Profile Info */
+.user-box {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.notification {
+  font-size: 1.3rem;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  background-color: #0a65ff;
+  color: white;
+  font-weight: bold;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+}
+
+.user-info{
+    display: flex;
+    flex-direction: column;
+}
+
+.user-info span {
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+.dashboard-container {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 600px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-header {
+  margin-bottom: 1rem;
+
+  .title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .icon {
+    font-size: 1.5rem;
+    color: #3b82f6;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0;
+  }
+
+  p {
+    color: #6b7280;
+    margin-top: 0.25rem;
+    font-size: 0.9rem;
+  }
+}
+
+.chart-container {
+  height: 300px;
+}
