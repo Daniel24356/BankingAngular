@@ -260,6 +260,40 @@ h2 {
   color: #a94442;
 }
 
+ .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      // background-color: red;
+    }
+    .head-tit{
+      height: 30px;
+    }
+    .header h2 {
+      font-size: 24px;
+    }
+
+    .header .actions {
+      display: flex;
+      gap: 10px;
+    }
+
+    .search-input {
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      width: 200px;
+    }
+
+    .filter-btn {
+      padding: 10px 16px;
+      border: 1px solid #ddd;
+      background: #fff;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
 /* Responsive Card Grid Adjustments */
 @media screen and (min-width: 1600px) {
   .card {

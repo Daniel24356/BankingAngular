@@ -12,6 +12,7 @@ import { AdminHomeComponent } from './admin-home/admin-home.component';
 import { UserManagementComponent } from './user-management/user-management.component';
 import { CreateUserComponent } from './create-user/create-user.component';
 import { WithdrawComponent } from './withdraw/withdraw.component';
+import { AdminTransactionComponent } from './admin-transaction/admin-transaction.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent }, 
@@ -23,6 +24,7 @@ export const routes: Routes = [
       { path: 'dashboard', component: AdminHomeComponent },
       { path: 'userManagement', component: UserManagementComponent },
       { path: 'createUser', component: CreateUserComponent },
+      { path: 'transaction', component: AdminTransactionComponent },
     ]
    },
   {

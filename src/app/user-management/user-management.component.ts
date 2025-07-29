@@ -9,5 +9,18 @@ import { MatToolbarModule } from '@angular/material/toolbar';
   styleUrl: './user-management.component.scss'
 })
 export class UserManagementComponent {
+   dropdownOpen: number | null = null;
 
+  toggleDropdown(index: number): void {
+    if (this.dropdownOpen === index) {
+      this.dropdownOpen = null;
+    } else {
+      this.dropdownOpen = index;
+    }
+  }
+
+  // Optional: Close dropdown if clicked outside
+  closeDropdown(): void {
+    this.dropdownOpen = null;
+  }
 }

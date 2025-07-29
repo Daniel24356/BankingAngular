@@ -27,50 +27,59 @@
       <h1>Transactions</h1>
     <p>Monitor and manage all financial transactions</p>
     </div>
-      <button class="report-btn">Generate Report</button>
+      <button class="report-btn">Export</button>
   </div>
 
   <div class="cards">
     <div class="card">
       <div class="card-header">
-        <span>Total Users</span>
-        <mat-icon>group</mat-icon>
+        <span>Total Volume</span>
+        <!-- <mat-icon>group</mat-icon> -->
       </div>
-      <h2>12,459</h2>
-      <p class="positive">↑ +12.3% vs last month</p>
+      <h2>$14,400</h2>
+      <p class="positive">+15.3% from yesterday</p>
     </div>
 
     <div class="card">
       <div class="card-header">
-        <span>Total Balance</span>
-        <mat-icon class="green">attach_money</mat-icon>
+        <span>Total Transactions</span>
+        <!-- <mat-icon class="green">attach_money</mat-icon> -->
       </div>
-      <h2>$2,847,392</h2>
-      <p class="positive">↑ +8.7% vs last month</p>
+      <h2>6</h2>
+      <p class="positive">+8.7% from yesterday</p>
     </div>
 
     <div class="card">
       <div class="card-header">
-        <span>Transactions</span>
-        <mat-icon class="purple">credit_card</mat-icon>
+        <span>Completed</span>
+        <!-- <mat-icon class="purple">credit_card</mat-icon> -->
       </div>
-      <h2>8,429</h2>
-      <p class="positive">↑ +23.1% vs last month</p>
+      <h2>3</h2>
+      <p class="positive">+12.1% from yesterday</p>
     </div>
 
     <div class="card">
       <div class="card-header">
-        <span>Active Accounts</span>
-        <mat-icon class="orange">monitor_heart</mat-icon>
+        <span>Pending</span>
+        <!-- <mat-icon class="orange">2</mat-icon> -->
       </div>
-      <h2>11,203</h2>
-      <p class="negative">↓ -2.4% vs last month</p>
+      <h2>2</h2>
+      <p class="negative">Requires attention</p>
     </div>
   </div>
 
     <div class="container">
-    <h2>Recent Transactions</h2>
-    <p class="subtitle">Latest customer transactions requiring attention</p>
+
+    <div class="header">
+      <div class="head-tit">
+         <h2>All Transaction</h2>
+      </div>
+     
+      <div class="actions">
+        <input class="search-input" type="text" placeholder="Search users…" />
+        <button class="filter-btn">Filter</button>
+      </div>
+    </div>
 
     <div class="transaction">
       <div class="info">

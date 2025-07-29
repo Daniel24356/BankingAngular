@@ -13,7 +13,7 @@
       <div class="user-box">
         <mat-icon class="notification">notifications</mat-icon>
         <div class="avatar">A</div>
-        <div class="user-info">
+        <div class="user-infos">
           <strong>Admin User</strong>
           <span>Super Admin</span>
         </div>
@@ -29,121 +29,141 @@
 
 </p>
     </div>
-      <button class="report-btn">Generate Report</button>
+      <button class="report-btn">Export</button>
   </div>
 
   <div class="cards">
     <div class="card">
       <div class="card-header">
         <span>Total Users</span>
-        <mat-icon>group</mat-icon>
+        <!-- <mat-icon>group</mat-icon> -->
       </div>
       <h2>12,459</h2>
-      <p class="positive">↑ +12.3% vs last month</p>
+      <p class="positive">+12.3% from last month</p>
     </div>
 
     <div class="card">
       <div class="card-header">
-        <span>Total Balance</span>
-        <mat-icon class="green">attach_money</mat-icon>
-      </div>
-      <h2>$2,847,392</h2>
-      <p class="positive">↑ +8.7% vs last month</p>
-    </div>
-
-    <div class="card">
-      <div class="card-header">
-        <span>Transactions</span>
-        <mat-icon class="purple">credit_card</mat-icon>
-      </div>
-      <h2>8,429</h2>
-      <p class="positive">↑ +23.1% vs last month</p>
-    </div>
-
-    <div class="card">
-      <div class="card-header">
-        <span>Active Accounts</span>
-        <mat-icon class="orange">monitor_heart</mat-icon>
+        <span>Active Users</span>
+        <!-- <mat-icon class="green">attach_money</mat-icon> -->
       </div>
       <h2>11,203</h2>
-      <p class="negative">↓ -2.4% vs last month</p>
+      <p class="positive">+8.7% from last month</p>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <span>New Users</span>
+        <!-- <mat-icon class="purple">credit_card</mat-icon> -->
+      </div>
+      <h2>324</h2>
+      <p class="positive">+23.1% from last month</p>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <span>Avg. Balance</span>
+        <mat-icon class="orange">monitor_heart</mat-icon>
+      </div>
+      <h2>$19,452</h2>
+      <p class="negative">-2.4% from last month</p>
+    </div>
+  </div>
+   
+  <div class="container">
+    <div class="header">
+      <div class="head-tit">
+         <h2>All Users</h2>
+      </div>
+     
+      <div class="actions">
+        <input class="search-input" type="text" placeholder="Search users…" />
+        <button class="filter-btn">Filter</button>
+      </div>
+    </div>
+
+    <!-- User List -->
+    <div class="user-card">
+      <div class="user-info">
+        <div class="avatar">JD</div>
+        <div class="details">
+          <div class="name">John Doe <span class="status active">Active</span></div>
+          <div class="user-meta">john.doe&commat;email.com<br/>USR001 • Joined 2023-01-15</div>
+        </div>
+      </div>
+      <div class="user-right">
+        <div class="amount">$15,430.00</div>
+        <div class="last-login">Last login: 2024-01-20</div>
+        <div class="more-options" (click)="toggleDropdown(1)">⋯</div>
+        <div class="dropdown" [class.show]="dropdownOpen === 1" id="dropdown-1">
+          <div class="dropdown-item">👁 View Details</div>
+          <div class="dropdown-item">✏️ Edit User</div>
+          <div class="dropdown-item delete">🗑 Delete User</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="user-card">
+      <div class="user-info">
+        <div class="avatar">JS</div>
+        <div class="details">
+          <div class="name">Jane Smith <span class="status active">Active</span></div>
+          <div class="user-meta">jane.smith&commat;email.com<br/>USR002 • Joined 2023-03-22</div>
+        </div>
+      </div>
+      <div class="user-right">
+        <div class="amount">$2,000.00</div>
+        <div class="last-login">Last login: 2024-01-19</div>
+        <div class="more-options" (click)="toggleDropdown(2)">⋯</div>
+        <div class="dropdown" [class.show]="dropdownOpen === 2" id="dropdown-2">
+          <div class="dropdown-item">👁 View Details</div>
+          <div class="dropdown-item">✏️ Edit User</div>
+          <div class="dropdown-item delete">🗑 Delete User</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="user-card">
+      <div class="user-info">
+        <div class="avatar">BJ</div>
+        <div class="details">
+          <div class="name">Bob Johnson <span class="status suspended">Suspended</span></div>
+          <div class="user-meta">bob.johnson&commat;email.com<br/>USR003 • Joined 2023-06-10</div>
+        </div>
+      </div>
+      <div class="user-right">
+        <div class="amount">$7,650.00</div>
+        <div class="last-login">Last login: 2024-01-18</div>
+        <div class="more-options" (click)="toggleDropdown(3)">⋯</div>
+        <div class="dropdown" [class.show]="dropdownOpen === 3" id="dropdown-3">
+          <div class="dropdown-item">👁 View Details</div>
+          <div class="dropdown-item">✏️ Edit User</div>
+          <div class="dropdown-item delete">🗑 Delete User</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="user-card">
+      <div class="user-info">
+        <div class="avatar">AB</div>
+        <div class="details">
+          <div class="name">Alice Brown <span class="status active">Active</span></div>
+          <div class="user-meta">alice.brown&commat;email.com<br/>USR004 • Joined 2023-02-28</div>
+        </div>
+      </div>
+      <div class="user-right">
+        <div class="amount">$42,180.00</div>
+        <div class="last-login">Last login: 2024-01-20</div>
+        <div class="more-options" (click)="toggleDropdown(4)">⋯</div>
+        <div class="dropdown" [class.show]="dropdownOpen === 4" id="dropdown-4">
+          <div class="dropdown-item">👁 View Details</div>
+          <div class="dropdown-item">✏️ Edit User</div>
+          <div class="dropdown-item delete">🗑 Delete User</div>
+        </div>
+      </div>
     </div>
   </div>
 
-    <div class="container">
-    <h2>Recent Transactions</h2>
-    <p class="subtitle">Latest customer transactions requiring attention</p>
-
-    <div class="transaction">
-      <div class="info">
-        <div class="icon"> <mat-icon class="blue">credit_card</mat-icon></div>
-        <div>
-          <p class="name">John Doe</p>
-          <p class="meta">TXN001 • Deposit</p>
-        </div>
-      </div>
-      <div class="details">
-        <p class="amount">$2,450.00</p>
-        <span class="status completed">Completed</span>
-      </div>
-    </div>
-
-    <div class="transaction">
-      <div class="info">
-        <div class="icon"> <mat-icon class="blue">credit_card</mat-icon></div>
-        <div>
-          <p class="name">Jane Smith</p>
-          <p class="meta">TXN002 • Withdrawal</p>
-        </div>
-      </div>
-      <div class="details">
-        <p class="amount">$1,200.00</p>
-        <span class="status pending">Pending</span>
-      </div>
-    </div>
-
-    <div class="transaction">
-      <div class="info">
-        <div class="icon"> <mat-icon class="blue">credit_card</mat-icon></div>
-        <div>
-          <p class="name">Bob Johnson</p>
-          <p class="meta">TXN003 • Transfer</p>
-        </div>
-      </div>
-      <div class="details">
-        <p class="amount">$3,800.00</p>
-        <span class="status completed">Completed</span>
-      </div>
-    </div>
-
-    <div class="transaction">
-      <div class="info">
-        <div class="icon"> <mat-icon class="blue">credit_card</mat-icon></div>
-        <div>
-          <p class="name">Alice Brown</p>
-          <p class="meta">TXN004 • Payment</p>
-        </div>
-      </div>
-      <div class="details">
-        <p class="amount">$950.00</p>
-        <span class="status failed">Failed</span>
-      </div>
-    </div>
-
-    <div class="transaction">
-      <div class="info">
-        <div class="icon"> <mat-icon class="blue">credit_card</mat-icon></div>
-        <div>
-          <p class="name">Charlie Wilson</p>
-          <p class="meta">TXN005 • Deposit</p>
-        </div>
-      </div>
-      <div class="details">
-        <p class="amount">$5,200.00</p>
-        <span class="status completed">Completed</span>
-      </div>
-    </div>
-  </div>
 </div>
 </body>
 </html>

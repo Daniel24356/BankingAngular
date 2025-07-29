@@ -72,7 +72,7 @@
   border-radius: 50%;
 }
 
-.user-info{
+.user-infos{
     display: flex;
     flex-direction: column;
 }
@@ -166,99 +166,160 @@
   color: #ea580c;
 }
 
-.container {
-  max-width: 94%;
-  margin: auto;
-  background: #fff;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-}
 
-h2 {
-  font-size: 24px;
-  margin-bottom: 5px;
-  color: #333;
-}
+    .container {
+      max-width: 95%;
+      margin: auto;
+      background: white;
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
 
-.subtitle {
-  font-size: 14px;
-  color: #666;
-  margin-bottom: 25px;
-}
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      // background-color: red;
+    }
+    .head-tit{
+      height: 30px;
+    }
+    .header h2 {
+      font-size: 24px;
+    }
 
-.transaction {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 18px 0;
-  border-bottom: 1px solid #eee;
-}
+    .header .actions {
+      display: flex;
+      gap: 10px;
+    }
 
-.transaction:last-child {
-  border-bottom: none;
-}
+    .search-input {
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      width: 200px;
+    }
 
-.info {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
+    .filter-btn {
+      padding: 10px 16px;
+      border: 1px solid #ddd;
+      background: #fff;
+      border-radius: 6px;
+      cursor: pointer;
+    }
 
-.icon {
-  background-color: #eaf1ff;
-  color: #3f7efc;
-  font-size: 20px;
-  width: 40px;
-  height: 40px;
-  display: grid;
-  place-items: center;
-  border-radius: 50%;
-}
+    .user-card {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+      border-top: 1px solid #eee;
+    }
 
-.name {
-  font-weight: 600;
-  color: #333;
-}
+    .user-info {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
 
-.meta {
-  font-size: 13px;
-  color: #888;
-}
+    .avatar {
+      background: #dfe3f0;
+      color: #333;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
 
-.details {
-  text-align: right;
-}
+    .details {
+      line-height: 1.4;
+    }
 
-.amount {
-  font-weight: 600;
-  color: #333;
-}
+    .details .name {
+      font-weight: bold;
+      font-size: 16px;
+    }
 
-.status {
-  display: inline-block;
-  margin-top: 5px;
-  padding: 4px 10px;
-  font-size: 12px;
-  border-radius: 12px;
-  font-weight: 500;
-  text-transform: capitalize;
-}
+    .status {
+      display: inline-block;
+      padding: 2px 8px;
+      font-size: 12px;
+      border-radius: 12px;
+      margin-left: 8px;
+    }
 
-.status.completed {
-  background-color: #e6f6ed;
-  color: #2e9a5e;
-}
+    .active {
+      background: #e6f9ed;
+      color: #29a76f;
+    }
 
-.status.pending {
-  background-color: #fff3cd;
-  color: #d39e00;
-}
+    .suspended {
+      background: #fff3db;
+      color: #e5a100;
+    }
 
-.status.failed {
-  background-color: #f8d7da;
-  color: #a94442;
-}
+    .user-meta {
+      font-size: 13px;
+      color: #888;
+    }
+
+    .user-right {
+      text-align: right;
+      position: relative;
+    }
+
+    .amount {
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .last-login {
+      font-size: 13px;
+      color: #888;
+    }
+
+    .more-options {
+      cursor: pointer;
+      font-size: 20px;
+      padding: 5px;
+      border-radius: 5px;
+    }
+
+    .dropdown {
+      position: absolute;
+      right: 0;
+      top: 30px;
+      background: white;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      overflow: hidden;
+      z-index: 100;
+      display: none;
+    }
+
+    .dropdown.show {
+      display: block;
+    }
+
+    .dropdown-item {
+      padding: 10px 16px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: background 0.2s;
+    }
+
+    .dropdown-item:hover {
+      background: #f5f5f5;
+    }
+
+    .dropdown-item.delete {
+      color: red;
+    }
 
 /* Responsive Card Grid Adjustments */
 @media screen and (min-width: 1600px) {
