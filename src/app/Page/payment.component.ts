@@ -1,7 +1,7 @@
-import { CommonModule } from '@angular/common';
-import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-payment',
@@ -16,14 +16,18 @@ export class PaymentComponent {
     toAccount: '',
     amount: ''
   };
-   
-   constructor(private http: HttpClient) {}
 
-     onTransfer() {
-    this.http.post('/fund-transfers', this.paymentData).subscribe({
-      next: (res) => console.log('Transfer successful', res),
-      error: (err) => console.error('Transfer failed', err)
+  onTransfer() {
+    const { toAccount, amount } = this.paymentData;
+    const formattedAmount = parseFloat(amount).toLocaleString();
+
+    Swal.fire({
+      icon: 'success',
+      title: 'Transfer Successful',
+      text: `₦${formattedAmount} sent to ${toAccount}`
     });
-  }
 
+    // Reset the form (optional)
+    this.paymentData = { fromAccount: '', toAccount: '', amount: '' };
+  }
 }

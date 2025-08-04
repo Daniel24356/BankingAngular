@@ -1,13 +1,14 @@
-import { CommonModule } from '@angular/common';
-import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-withdraw',
-  imports: [CommonModule, FormsModule, MatToolbarModule, MatIconModule,],
+  standalone: true,
+  imports: [CommonModule, FormsModule, MatToolbarModule, MatIconModule],
   templateUrl: './withdraw.component.html',
   styleUrl: './withdraw.component.scss'
 })
@@ -19,26 +20,27 @@ export class WithdrawComponent {
     description: '',
   };
 
-   message = '';
 
-  constructor(private http: HttpClient) {}
-
-   withdrawFunds() {
-    if (!this.formData.accountId || !this.formData.amount) {
-      this.message = 'Please provide account ID and amount.';
-      return;
-    }
-
-    this.http.post('/api/transactions', this.formData).subscribe({
-      next: (res) => {
-        this.message = 'Withdrawal successful.';
-        this.formData.amount = '';
-        this.formData.description = '';
-      },
-      error: (err) => {
-        this.message = 'Withdrawal failed.';
-        console.error(err);
-      },
+withdrawFunds() {
+  if (!this.formData.accountId || !this.formData.amount) {
+    Swal.fire({
+      icon: 'error',
+      title: 'Missing Details',
+      text: 'Please provide account ID and amount.',
     });
+    return;
   }
+
+  // Simulate success (remove this part if connecting to backend)
+  Swal.fire({
+    icon: 'success',
+    title: 'Withdrawal Successful',
+    text: `₦${parseFloat(this.formData.amount).toLocaleString()} has been withdrawn from account ${this.formData.accountId}.`
+  });
+
+  // Clear form (optional)
+  this.formData.amount = '';
+  this.formData.description = '';
+}
+
 }

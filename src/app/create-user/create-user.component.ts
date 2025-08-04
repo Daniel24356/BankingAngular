@@ -1,45 +1,50 @@
 import { CommonModule } from '@angular/common';
-import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-create-user',
-  imports: [MatToolbarModule, MatIconModule, CommonModule, FormsModule],
+  standalone: true,
+  imports: [CommonModule, FormsModule, MatToolbarModule, MatIconModule],
   templateUrl: './create-user.component.html',
-  styleUrl: './create-user.component.scss'
+  styleUrls: ['./create-user.component.scss']
 })
 export class CreateUserComponent {
-   formData = {
+  formData = {
     accountType: '',
     userId: ''
   };
 
-   message = '';
   loading = false;
 
-   constructor(private http: HttpClient) {}
-
-    createAccount() {
+  createAccount() {
     if (!this.formData.accountType || !this.formData.userId) {
-      this.message = 'All fields are required.';
+      Swal.fire('Error', 'All fields are required.', 'error');
       return;
     }
 
     this.loading = true;
-    this.http.post('/accounts', this.formData).subscribe({
-      next: (res: any) => {
-        this.message = 'Account successfully created!';
-        this.loading = false;
-      },
-      error: (err) => {
-        this.message = 'Failed to create account.';
-        console.error(err);
-        this.loading = false;
-      }
-    });
-  }
 
+    // Simulate account storage in localStorage
+    const existingAccounts = JSON.parse(localStorage.getItem('accounts') || '[]');
+
+    const newAccount = {
+      accountType: this.formData.accountType,
+      userId: this.formData.userId,
+      accountNumber: 'ACCT' + Math.floor(100000 + Math.random() * 900000), // Random 6-digit
+      balance: 0
+    };
+
+    existingAccounts.push(newAccount);
+    localStorage.setItem('accounts', JSON.stringify(existingAccounts));
+
+    setTimeout(() => {
+      this.loading = false;
+      Swal.fire('Success', 'Account created successfully!', 'success');
+      this.formData = { accountType: '', userId: '' };
+    }, 1000);
+  }
 }

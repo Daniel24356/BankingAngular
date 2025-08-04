@@ -7,67 +7,56 @@
 </head>
 <body>
       <div class="login">
-        <div class="login-left">
-            <form action="">
-                <div>
-                    <!-- <img class="login-img" src="logo.png" alt=""> -->
-                       <h2 class="logo">Micro<span>service</span></h2>
-                </div>
-                <div class="login-innerdiv">
-                    <h1>Sign up</h1>
-                    <p>Please enter your details</p>
-                </div>
-                <div>
-                    <div class="signup-innerdiv">
-                        <div class="email-input-divs">
-                            <span>First Name</span>
-                             <input type="text" [(ngModel)]="user.firstName" name="firstName" placeholder="First Name" required />
-                        </div>
-                        <div class="email-input-divs">
-                            <span>Last Name</span>
-                             <input type="text" [(ngModel)]="user.lastName" name="lastName" placeholder="Last Name" required />
-                        </div>
-                    </div>
-                    <div class="email-input-div">
-                        <span>Email</span>
-                        <input type="email" [(ngModel)]="user.emailId" name="emailId" placeholder="Email" required />
-                    </div>
-                    <!-- <div class="signup-innerdiv">
-                        <div class="email-input-divs">
-                            <span>State</span>
-                            <input type="text" placeholder="NY">
-                        </div>
-                        <div class="email-input-divs">
-                            <span>Postal Code</span>
-                            <input type="text" placeholder="ex: 11101">
-                        </div>
-                    </div> -->
-                    <!-- <div class="signup-innerdiv">
-                        <div class="email-input-divs">
-                            <span>Date of Birth</span>
-                            <input type="text" placeholder="yyyy-mm-dd">
-                        </div>
-                        <div class="email-input-divs">
-                            <span>SSN</span>
-                            <input type="text" placeholder="ex: 1234">
-                        </div>
-                    </div> -->
-                    <div class="email-input-div">
-                        <span>Phone Number</span>
-                        <input type="tel" [(ngModel)]="user.contactNumber" name="contactNumber" placeholder="Phone Number" required />
-                    </div>
-                    <div class="email-input-div">
-                        <span>Password</span>
-                         <input type="password" [(ngModel)]="user.password" name="password" placeholder="Password" required />
-                    </div>
-                    <button type="submit" class="login-btn">Sign up</button>
-                    <p class="dont-account-txt">Dont have an account? <span  routerLink="/login">Login</span></p>
-                </div>
-            </form>      
+  <div class="login-left">
+    <form (ngSubmit)="onRegister()" #registerForm="ngForm">
+      <div>
+        <h2 class="logo">Micro<span>service</span></h2>
+      </div>
+
+      <div class="login-innerdiv">
+        <h1>Sign up</h1>
+        <p>Please enter your details</p>
+      </div>
+
+      <div class="signup-innerdiv">
+        <div class="email-input-divs">
+          <span>First Name</span>
+          <input type="text" [(ngModel)]="user.firstName" name="firstName" required placeholder="First Name" />
         </div>
-        <div class="login-right">
-            <img src="Section.png" alt="">
+        <div class="email-input-divs">
+          <span>Last Name</span>
+          <input type="text" [(ngModel)]="user.lastName" name="lastName" required placeholder="Last Name" />
         </div>
-      </div>     
+      </div>
+
+      <div class="email-input-div">
+        <span>Email</span>
+        <input type="email" [(ngModel)]="user.emailId" name="emailId" required placeholder="Email" />
+      </div>
+
+      <div class="email-input-div">
+        <span>Phone Number</span>
+        <input type="tel" [(ngModel)]="user.contactNumber" name="contactNumber" required placeholder="Phone Number" />
+      </div>
+
+      <div class="email-input-div">
+        <span>Password</span>
+        <input type="password" [(ngModel)]="user.password" name="password" required placeholder="Password" />
+      </div>
+
+      <button type="submit" class="login-btn">Sign up</button>
+
+      <p class="dont-account-txt">
+        Already have an account?
+        <a routerLink="/login">Login</a>
+      </p>
+    </form>
+  </div>
+
+  <div class="login-right">
+    <img src="Section.png" alt="login image" />
+  </div>
+</div>
+
 </body>
 </html>

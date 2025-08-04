@@ -36,7 +36,7 @@
         <span>Total Volume</span>
         <!-- <mat-icon>group</mat-icon> -->
       </div>
-      <h2>$14,400</h2>
+      <h2>$1000</h2>
       <p class="positive">+15.3% from yesterday</p>
     </div>
 
@@ -45,7 +45,7 @@
         <span>Total Transactions</span>
         <!-- <mat-icon class="green">attach_money</mat-icon> -->
       </div>
-      <h2>6</h2>
+      <h2>2</h2>
       <p class="positive">+8.7% from yesterday</p>
     </div>
 
@@ -54,7 +54,7 @@
         <span>Completed</span>
         <!-- <mat-icon class="purple">credit_card</mat-icon> -->
       </div>
-      <h2>3</h2>
+      <h2>2</h2>
       <p class="positive">+12.1% from yesterday</p>
     </div>
 
@@ -63,7 +63,7 @@
         <span>Pending</span>
         <!-- <mat-icon class="orange">2</mat-icon> -->
       </div>
-      <h2>2</h2>
+      <h2>0</h2>
       <p class="negative">Requires attention</p>
     </div>
   </div>
@@ -81,75 +81,21 @@
       </div>
     </div>
 
-    <div class="transaction">
-      <div class="info">
-        <div class="icon"> <mat-icon class="blue">credit_card</mat-icon></div>
-        <div>
-          <p class="name">John Doe</p>
-          <p class="meta">TXN001 • Deposit</p>
-        </div>
-      </div>
-      <div class="details">
-        <p class="amount">$2,450.00</p>
-        <span class="status completed">Completed</span>
-      </div>
+  <div class="transaction" *ngFor="let txn of transactions">
+  <div class="info">
+    <div class="icon"><mat-icon class="blue">credit_card</mat-icon></div>
+    <div>
+      <p class="name">{{ txn.name }}</p>
+      <p class="meta">{{ txn.id }} • {{ txn.type }}</p>
     </div>
+  </div>
+  <div class="details">
+    <p class="amount">₦{{ txn.amount | number:'1.0-2' }}</p>
+    <span class="status" [ngClass]="txn.status">{{ txn.status | titlecase }}</span>
+  </div>
+</div>
 
-    <div class="transaction">
-      <div class="info">
-        <div class="icon"> <mat-icon class="blue">credit_card</mat-icon></div>
-        <div>
-          <p class="name">Jane Smith</p>
-          <p class="meta">TXN002 • Withdrawal</p>
-        </div>
-      </div>
-      <div class="details">
-        <p class="amount">$1,200.00</p>
-        <span class="status pending">Pending</span>
-      </div>
-    </div>
-
-    <div class="transaction">
-      <div class="info">
-        <div class="icon"> <mat-icon class="blue">credit_card</mat-icon></div>
-        <div>
-          <p class="name">Bob Johnson</p>
-          <p class="meta">TXN003 • Transfer</p>
-        </div>
-      </div>
-      <div class="details">
-        <p class="amount">$3,800.00</p>
-        <span class="status completed">Completed</span>
-      </div>
-    </div>
-
-    <div class="transaction">
-      <div class="info">
-        <div class="icon"> <mat-icon class="blue">credit_card</mat-icon></div>
-        <div>
-          <p class="name">Alice Brown</p>
-          <p class="meta">TXN004 • Payment</p>
-        </div>
-      </div>
-      <div class="details">
-        <p class="amount">$950.00</p>
-        <span class="status failed">Failed</span>
-      </div>
-    </div>
-
-    <div class="transaction">
-      <div class="info">
-        <div class="icon"> <mat-icon class="blue">credit_card</mat-icon></div>
-        <div>
-          <p class="name">Charlie Wilson</p>
-          <p class="meta">TXN005 • Deposit</p>
-        </div>
-      </div>
-      <div class="details">
-        <p class="amount">$5,200.00</p>
-        <span class="status completed">Completed</span>
-      </div>
-    </div>
+   
   </div>
 </div>
 </body>

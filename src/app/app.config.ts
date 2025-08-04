@@ -15,17 +15,17 @@ export const appConfig: ApplicationConfig = {
     provideAnimations(),
     provideRouter(routes),
     provideHttpClient(withInterceptorsFromDi()),
-    provideKeycloak({
-  config: {
-    url: 'http://localhost:8080',  // 🔁 replace this
-    realm: 'master',                        // 🔁 replace this
-    clientId: 'angular-client'                  // 🔁 replace this
-  },
-  initOptions: {
-    onLoad: 'login-required',
-    checkLoginIframe: false
-  }
-}),
+//     provideKeycloak({
+//   config: {
+//     url: 'http://localhost:8080',  // 🔁 replace this
+//     realm: 'master',                        // 🔁 replace this
+//     clientId: 'angular-client'                  // 🔁 replace this
+//   },
+//   initOptions: {
+//     onLoad: 'login-required',
+//     checkLoginIframe: false
+//   }
+// }),
 provideCharts(withDefaultRegisterables()),
     // keycloakInitializer,
     { provide: HTTP_INTERCEPTORS, useClass: BaseUrlInterceptor, multi: true }
