@@ -98,7 +98,7 @@
     </div>
   </div>
   <div class="user-right">
-    <div class="amount">${{ user.balance | number: '1.2-2' }}</div>
+    <div class="amount">&#8358;{{ user.balance | number: '1.2-2' }}</div>
     <div class="last-login">Last login: {{ user.lastLogin }}</div>
     <div class="more-options" (click)="toggleDropdown(i)">⋯</div>
     <div class="dropdown" [class.show]="dropdownOpen === i">
