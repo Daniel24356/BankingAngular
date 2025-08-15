@@ -70,6 +70,27 @@
       </ngx-charts-area-chart>
     </div>
   </div>
+
+  <div class="card">
+  <div class="card-header">
+    <div class="title">
+      <mat-icon class="text-blue-600">pie_chart</mat-icon>
+      <h2>Success vs Failure Rate</h2>
+    </div>
+    <p>Performance breakdown based on recent transactions</p>
+  </div>
+  <div class="chart-container">
+    <ngx-charts-pie-chart
+      [results]="successFailureData"
+      [legend]="true"
+      [labels]="true"
+      [doughnut]="false"
+      [explodeSlices]="false"
+      [scheme]="colorScheme">
+    </ngx-charts-pie-chart>
+  </div>
+</div>
+
 </div>
 
     </div>
