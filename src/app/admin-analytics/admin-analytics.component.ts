@@ -18,6 +18,11 @@ export class AdminAnalyticsComponent {
   group: ScaleType.Ordinal,
   domain: ['#3b82f6', '#6366f1', '#06b6d4'],
 };
+  
+ successFailureData = [
+    { name: 'Success', value: 1932 },
+    { name: 'Failure', value: 68 }
+  ];
 
   revenueData = [
     { name: 'Jan', value: 32000 },
