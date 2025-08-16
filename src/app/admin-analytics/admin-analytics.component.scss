@@ -112,6 +112,7 @@
 .dashboard-container {
   display: flex;
   gap: 2rem;
+  flex-wrap: wrap;
 //   padding: 2rem;
 padding-left: 2rem;
 padding-right: 2rem;
