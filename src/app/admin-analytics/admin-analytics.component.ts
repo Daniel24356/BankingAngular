@@ -24,12 +24,22 @@ export class AdminAnalyticsComponent {
     { name: 'Failure', value: 68 }
   ];
 
-   labelFormatting = (label: string, value: number): string => {
-    const total = this.successFailureData
-      .map(d => d.value)
-      .reduce((sum, val) => sum + val, 0);
-    const percent = ((value / total) * 100).toFixed(1);
-    return `${label}: ${value} (${percent}%)`;
+    // Formatter for labels (lookup value by name)
+  labelFormatting = (label: string): string => {
+    const item = this.successFailureData.find(d => d.name === label);
+    if (!item) return label;
+
+    const total = this.successFailureData.reduce((sum, d) => sum + d.value, 0);
+    const percent = ((item.value / total) * 100).toFixed(1);
+
+    return `${label}: ${item.value} (${percent}%)`;
+  };
+
+  // Formatter for tooltip (hover info)
+  tooltipFormatting = (item: any): string => {
+    const total = this.successFailureData.reduce((sum, d) => sum + d.value, 0);
+    const percent = ((item.value / total) * 100).toFixed(1);
+    return `${item.name}: ${item.value} (${percent}%)`;
   };
 
   revenueData = [
