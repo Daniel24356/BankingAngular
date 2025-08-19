@@ -18,11 +18,15 @@ export class AdminAnalyticsComponent {
   group: ScaleType.Ordinal,
   domain: ['#3b82f6', '#6366f1', '#06b6d4'],
 };
-  
+
  successFailureData = [
     { name: 'Success', value: 1932 },
     { name: 'Failure', value: 68 }
   ];
+
+   colorSchemes = {
+    domain: ['#4CAF50', '#F44336'] // green for success, red for failure
+  };
 
     // Formatter for labels (lookup value by name)
   labelFormatting = (label: string): string => {
