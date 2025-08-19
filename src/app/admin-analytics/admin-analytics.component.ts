@@ -24,12 +24,12 @@ export class AdminAnalyticsComponent {
     { name: 'Failure', value: 68 }
   ];
 
-   labelFormatting = (c: any) => {
+   labelFormatting = (label: string, value: number): string => {
     const total = this.successFailureData
       .map(d => d.value)
       .reduce((sum, val) => sum + val, 0);
-    const percent = ((c.value / total) * 100).toFixed(1);
-    return `${c.name}: ${c.value} (${percent}%)`;
+    const percent = ((value / total) * 100).toFixed(1);
+    return `${label}: ${value} (${percent}%)`;
   };
 
   revenueData = [
