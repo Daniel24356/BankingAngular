@@ -24,9 +24,9 @@ export class AdminAnalyticsComponent {
     { name: 'Failure', value: 68 }
   ];
 
-   colorSchemes = {
-    domain: ['#4CAF50', '#F44336'] // green for success, red for failure
-  };
+  //   colorScheme = {
+  //   domain: ['#4CAF50', '#F44336']
+  // };
 
     // Formatter for labels (lookup value by name)
   labelFormatting = (label: string): string => {
