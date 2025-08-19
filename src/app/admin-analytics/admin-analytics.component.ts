@@ -24,6 +24,14 @@ export class AdminAnalyticsComponent {
     { name: 'Failure', value: 68 }
   ];
 
+   labelFormatting = (c: any) => {
+    const total = this.successFailureData
+      .map(d => d.value)
+      .reduce((sum, val) => sum + val, 0);
+    const percent = ((c.value / total) * 100).toFixed(1);
+    return `${c.name}: ${c.value} (${percent}%)`;
+  };
+
   revenueData = [
     { name: 'Jan', value: 32000 },
     { name: 'Feb', value: 45000 },
