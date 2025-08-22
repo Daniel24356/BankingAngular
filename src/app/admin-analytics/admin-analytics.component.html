@@ -113,7 +113,27 @@
     </div>
   </div>
 
- 
+ <div class="card">
+  <div class="card-header">
+    <div class="title">
+      <mat-icon class="text-blue-600">speed</mat-icon>
+      <h2>Transaction Latency Distribution</h2>
+    </div>
+    <p>Number of transactions by latency range</p>
+  </div>
+
+  <div class="chart-container">
+    <ngx-charts-bar-vertical
+      [results]="latencyData"
+      [xAxis]="true"
+      [yAxis]="true"
+      [legend]="false"
+      [showDataLabel]="true"
+      [scheme]="colorScheme">
+    </ngx-charts-bar-vertical>
+  </div>
+</div>
+
 
 </div>
 
