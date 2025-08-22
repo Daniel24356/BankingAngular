@@ -186,20 +186,28 @@
 <div class="card">
   <div class="card-header">
     <div class="title">
-      <mat-icon class="text-blue-600">restore</mat-icon>
+      <mat-icon class="text-blue-600">table_chart</mat-icon>
       <h2>SAGA Recovery Duration</h2>
     </div>
-    <p>Time-to-consistency for rolled back transactions</p>
+    <p>Time-to-consistency for transactions</p>
   </div>
-  <div class="chart-container">
-    <ngx-charts-bar-vertical
-      [results]="sagaRecoveryData"
-      [xAxis]="true"
-      [yAxis]="true"
-      [legend]="false"
-      [showDataLabel]="true"
-      [scheme]="colorScheme">
-    </ngx-charts-bar-vertical>
+  <div class="table-container">
+    <table class="saga-table">
+      <thead>
+        <tr>
+          <th>Transaction ID</th>
+          <th>Rolled Back?</th>
+          <th>Time to Recovery (ms)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let txn of sagaRecoveryTable">
+          <td>{{ txn.id }}</td>
+          <td>{{ txn.rolledBack ? 'Yes' : 'No' }}</td>
+          <td>{{ txn.recoveryTime !== null ? txn.recoveryTime : '-' }}</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </div>
 
