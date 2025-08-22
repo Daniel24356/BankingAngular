@@ -69,10 +69,10 @@ sagaRecoveryTable = [
   { id: 'TXN-C3', rolledBack: true, recoveryTime: 220 }
 ];
 
-throughputData = [
-  { name: '10:00 – 10:10', value: 240 },
-  { name: '10:10 – 10:20', value: 270 },
-  { name: '10:20 – 10:30', value: 255 }
+throughputTable = [
+  { time: '10:00 – 10:10', transactions: 240 },
+  { time: '10:10 – 10:20', transactions: 270 },
+  { time: '10:20 – 10:30', transactions: 255 }
 ];
 
 

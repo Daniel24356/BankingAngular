@@ -211,7 +211,31 @@
   </div>
 </div>
 
-
+<div class="card">
+  <div class="card-header">
+    <div class="title">
+      <mat-icon class="text-blue-600">table_chart</mat-icon>
+      <h2>Throughput vs Time</h2>
+    </div>
+    <p>System performance over time windows</p>
+  </div>
+  <div class="table-container">
+    <table class="throughput-table">
+      <thead>
+        <tr>
+          <th>Time Window</th>
+          <th>Number of Transactions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let entry of throughputTable">
+          <td>{{ entry.time }}</td>
+          <td>{{ entry.transactions }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
 
 
 </div>
