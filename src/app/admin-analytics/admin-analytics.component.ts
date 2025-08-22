@@ -30,6 +30,15 @@ getPercentage(value: number): string {
   return ((value / this.total) * 100).toFixed(1);
 }
 
+latencyData = [
+  { name: '0–100 ms', value: 5 },
+  { name: '101–200 ms', value: 1270 },
+  { name: '201–300 ms', value: 682 },
+  { name: '301–400 ms', value: 38 },
+  { name: '401+ ms', value: 5 }
+];
+
+
   //   colorScheme = {
   //   domain: ['#4CAF50', '#F44336']
   // };
