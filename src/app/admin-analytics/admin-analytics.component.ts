@@ -38,6 +38,20 @@ latencyData = [
   { name: '401+ ms', value: 5 }
 ];
 
+concurrentLatencyData = [
+  {
+    name: 'Avg Latency',
+    series: [
+      { name: '10', value: 160 },
+      { name: '50', value: 210 },
+      { name: '100', value: 275 },
+      { name: '200', value: 470 },
+      { name: '500', value: 1100 }
+    ]
+  }
+];
+
+
 
   //   colorScheme = {
   //   domain: ['#4CAF50', '#F44336']
