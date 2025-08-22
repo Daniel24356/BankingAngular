@@ -134,6 +134,31 @@
   </div>
 </div>
 
+<div class="card">
+  <div class="card-header">
+    <div class="title">
+      <mat-icon class="text-blue-600">show_chart</mat-icon>
+      <h2>Average Latency vs Concurrent Load</h2>
+    </div>
+    <p>Impact of increasing concurrent requests on latency</p>
+  </div>
+
+  <div class="chart-container">
+    <ngx-charts-line-chart
+      [results]="concurrentLatencyData"
+      [xAxis]="true"
+      [yAxis]="true"
+      [legend]="false"
+      [showXAxisLabel]="true"
+      [showYAxisLabel]="true"
+      [xAxisLabel]="'Concurrent Requests'"
+      [yAxisLabel]="'Avg Latency (ms)'"
+      [scheme]="colorScheme">
+    </ngx-charts-line-chart>
+  </div>
+</div>
+
+
 
 </div>
 
