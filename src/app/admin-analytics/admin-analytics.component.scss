@@ -200,6 +200,45 @@ padding-bottom: 2rem;
   color: #dc2626; /* red */
 }
 
+.table-container {
+  overflow-x: auto;
+  margin-top: 1rem;
+}
+
+.throughput-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.throughput-table thead {
+  background-color: #f3f4f6;
+  text-align: left;
+}
+
+.throughput-table th,
+.throughput-table td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.throughput-table th {
+  font-weight: 600;
+  color: #374151; // gray-700
+}
+
+.throughput-table td {
+  color: #4b5563; // gray-600
+}
+
+.throughput-table tr:last-child td {
+  border-bottom: none;
+}
+
+
 
 @media screen and (max-width: 1550px) {
  .dashboard-container{
