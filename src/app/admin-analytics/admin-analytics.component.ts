@@ -63,6 +63,10 @@ retryFrequencyData = [
   }
 ];
 
+sagaRecoveryData = [
+  { name: 'TXN-A1', value: 180 },
+  { name: 'TXN-C3', value: 220 }
+];
 
 
 
