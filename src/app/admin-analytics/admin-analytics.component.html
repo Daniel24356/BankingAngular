@@ -187,24 +187,22 @@
   <div class="card-header">
     <div class="title">
       <mat-icon class="text-blue-600">table_chart</mat-icon>
-      <h2>SAGA Recovery Duration</h2>
+      <h2>Throughput vs Time</h2>
     </div>
-    <p>Time-to-consistency for transactions</p>
+    <p>System performance over time windows</p>
   </div>
   <div class="table-container">
     <table class="saga-table">
       <thead>
         <tr>
-          <th>Transaction ID</th>
-          <th>Rolled Back?</th>
-          <th>Time to Recovery (ms)</th>
+          <th>Time Window</th>
+          <th>Number of Transactions</th>
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let txn of sagaRecoveryTable">
-          <td>{{ txn.id }}</td>
-          <td>{{ txn.rolledBack ? 'Yes' : 'No' }}</td>
-          <td>{{ txn.recoveryTime !== null ? txn.recoveryTime : '-' }}</td>
+        <tr *ngFor="let entry of throughputTable">
+          <td>{{ entry.time }}</td>
+          <td>{{ entry.transactions }}</td>
         </tr>
       </tbody>
     </table>
