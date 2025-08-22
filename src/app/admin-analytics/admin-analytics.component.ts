@@ -63,10 +63,12 @@ retryFrequencyData = [
   }
 ];
 
-sagaRecoveryData = [
-  { name: 'TXN-A1', value: 180 },
-  { name: 'TXN-C3', value: 220 }
+sagaRecoveryTable = [
+  { id: 'TXN-A1', rolledBack: true, recoveryTime: 180 },
+  { id: 'TXN-B2', rolledBack: false, recoveryTime: null },
+  { id: 'TXN-C3', rolledBack: true, recoveryTime: 220 }
 ];
+
 
 
 
