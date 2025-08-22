@@ -51,6 +51,14 @@ concurrentLatencyData = [
   }
 ];
 
+retryFrequencyData = [
+  { name: '0 Retries', value: 1950 },
+  { name: '1 Retry', value: 45 },
+  { name: '2 Retries', value: 3 },
+  { name: '3+ (Failed)', value: 2 }
+];
+
+
 
 
   //   colorScheme = {
