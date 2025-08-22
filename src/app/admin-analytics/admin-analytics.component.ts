@@ -24,6 +24,12 @@ export class AdminAnalyticsComponent {
     { name: 'Failure', value: 68 }
   ];
 
+//   total = this.successFailureData.reduce((sum, item) => sum + item.value, 0);
+
+// getPercentage(value: number): string {
+//   return ((value / this.total) * 100).toFixed(1);
+// }
+
   //   colorScheme = {
   //   domain: ['#4CAF50', '#F44336']
   // };

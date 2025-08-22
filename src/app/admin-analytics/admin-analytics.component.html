@@ -54,6 +54,23 @@
       </ngx-charts-pie-chart>
       
   </div>
+  <div class="metrics-container">
+  <div class="metric-card success">
+    <p class="metric-title">
+      Success</p>
+    <h2 class="metric-value">
+      {{ successFailureData[0].value }}
+    </h2>
+  </div>
+
+  <div class="metric-card failure">
+    <p class="metric-title">Failure</p>
+    <h2 class="metric-value">
+      {{ successFailureData[1].value }}
+    </h2>
+  </div>
+</div>
+
 </div>
 
   <div class="card">
