@@ -158,6 +158,26 @@
   </div>
 </div>
 
+<div class="card">
+  <div class="card-header">
+    <div class="title">
+      <mat-icon class="text-blue-600">bar_chart</mat-icon>
+      <h2>Retry Frequency Analysis</h2>
+    </div>
+    <p>Distribution of retries across transactions</p>
+  </div>
+
+  <div class="chart-container">
+    <ngx-charts-bar-vertical
+      [results]="retryFrequencyData"
+      [xAxis]="true"
+      [yAxis]="true"
+      [legend]="false"
+      [showDataLabel]="true"
+      [scheme]="colorScheme">
+    </ngx-charts-bar-vertical>
+  </div>
+</div>
 
 
 </div>
